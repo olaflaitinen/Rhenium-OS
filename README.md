@@ -15,7 +15,7 @@
 
 ## Overview
 
-**Rhenium OS** is a state-of-the-art, production-grade AI operating system engineered to transform diagnostic medical imaging across multiple modalities (MRI, CT, Ultrasound, X-ray). Built on a foundation of **proprietary deep learning models**—including Physics-Informed Neural Networks (PINNs), Generative Adversarial Networks (GANs), U-Net architectures, Vision Transformers, and 3D CNNs—Rhenium OS delivers an end-to-end framework for ingesting, reconstructing, analyzing, and explaining medical imaging studies with unprecedented speed, accuracy, and transparency.
+**Rhenium OS** is a state-of-the-art, production-grade AI operating system engineered to transform diagnostic medical imaging across multiple modalities (MRI, CT, Ultrasound, X-ray). Built on a foundation of **proprietary deep learning models**, including Physics-Informed Neural Networks (PINNs), Generative Adversarial Networks (GANs), U-Net architectures, Vision Transformers, and 3D CNNs, Rhenium OS delivers an end-to-end framework for ingesting, reconstructing, analyzing, and explaining medical imaging studies with unprecedented speed, accuracy, and transparency.
 
 ### Core Principles
 

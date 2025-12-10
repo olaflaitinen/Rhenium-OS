@@ -6,7 +6,7 @@
 
 ## Overview
 
-The MedGemma module provides clinical reasoning and explanation capabilities within Rhenium OS. As one component of the broader model ecosystem—alongside PINNs, GANs, U-Net, Vision Transformers, and 3D CNNs—MedGemma specializes in generating structured reports, providing finding explanations, and ensuring narrative consistency. This document describes the integration architecture, design patterns, and best practices.
+The MedGemma module provides clinical reasoning and explanation capabilities within Rhenium OS. As one component of the broader model ecosystem, alongside PINNs, GANs, U-Net, Vision Transformers, and 3D CNNs, MedGemma specializes in generating structured reports, providing finding explanations, and ensuring narrative consistency. This document describes the integration architecture, design patterns, and best practices.
 
 ---
 

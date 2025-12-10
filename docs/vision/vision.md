@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-Skolyn Rhenium OS is a state-of-the-art AI operating system engineered to transform diagnostic medical imaging. Built on a foundation of **proprietary deep learning models**—including Physics-Informed Neural Networks (PINNs), Generative Adversarial Networks (GANs), U-Net architectures, Vision Transformers, and 3D CNNs—Rhenium OS integrates advanced reconstruction, perception, and reasoning capabilities into a unified platform that delivers unprecedented speed, accuracy, and transparency.
+Skolyn Rhenium OS is a state-of-the-art AI operating system engineered to transform diagnostic medical imaging. Built on a foundation of **proprietary deep learning models**, including Physics-Informed Neural Networks (PINNs), Generative Adversarial Networks (GANs), U-Net architectures, Vision Transformers, and 3D CNNs, Rhenium OS integrates advanced reconstruction, perception, and reasoning capabilities into a unified platform that delivers unprecedented speed, accuracy, and transparency.
 
 ---
 

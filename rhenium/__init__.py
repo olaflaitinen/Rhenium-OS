@@ -9,9 +9,9 @@ State-of-the-Art AI Operating System for Diagnostic Medical Imaging.
 
 Rhenium OS is Skolyn's centralized, production-grade artificial intelligence
 operating system engineered for diagnostic radiology. Built on a foundation
-of proprietary deep learning models—including Physics-Informed Neural Networks
+of proprietary deep learning models, including Physics-Informed Neural Networks
 (PINNs), Generative Adversarial Networks (GANs), U-Net architectures, Vision
-Transformers, and 3D CNNs—Rhenium OS delivers unprecedented speed, accuracy,
+Transformers, and 3D CNNs. Rhenium OS delivers unprecedented speed, accuracy,
 and transparency across MRI, CT, Ultrasound, and X-ray modalities.
 
 Last Updated: December 2025

@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This document provides a comprehensive overview of the Skolyn Rhenium OS architecture. Rhenium OS is a state-of-the-art, layered, modular system built on proprietary deep learning models—including Physics-Informed Neural Networks (PINNs), Generative Adversarial Networks (GANs), U-Net architectures, Vision Transformers, and 3D CNNs—that orchestrates the complete medical imaging AI pipeline from data ingestion through clinical reporting with unprecedented speed, accuracy, and transparency.
+This document provides a comprehensive overview of the Skolyn Rhenium OS architecture. Rhenium OS is a state-of-the-art, layered, modular system built on proprietary deep learning models, including Physics-Informed Neural Networks (PINNs), Generative Adversarial Networks (GANs), U-Net architectures, Vision Transformers, and 3D CNNs, that orchestrates the complete medical imaging AI pipeline from data ingestion through clinical reporting with unprecedented speed, accuracy, and transparency.
 
 ---
 
