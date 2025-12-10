@@ -2,7 +2,7 @@
 
 **State-of-the-Art Multi-Modality AI Operating System for Diagnostic Medical Imaging**
 
-*Fast. Accurate. Transparent. Production-Ready.*
+*Early. Accurate. Trusted.*
 
 [![License: EUPL-1.1](https://img.shields.io/badge/License-EUPL--1.1-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-green.svg)](https://www.python.org/)
