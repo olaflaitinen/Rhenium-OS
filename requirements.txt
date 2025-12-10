@@ -3,3 +3,6 @@ scipy>=1.7.0
 pydicom>=2.0.0
 nibabel>=3.0.0
 h5py>=3.0.0
+fastapi>=0.95.0
+uvicorn>=0.20.0
+python-multipart>=0.0.6
