@@ -297,7 +297,7 @@ These are aspirational targets; deployed models require empirical validation on 
 This project is licensed under the **European Union Public License 1.1 (EUPL-1.1)**.
 
 ```
-SPDX-License-Identifier: EUPL-1.1
+
 ```
 
 See [LICENSE](LICENSE) for the full license text.

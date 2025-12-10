@@ -1,0 +1,132 @@
+{
+  "case_id": "bbd1387f-8357-48bb-940e-3ce247fdabe4",
+  "study_output": {
+    "patient_id": "C-303",
+    "study_date": "2025-12-10",
+    "modality": "Ultrasound",
+    "protocol": "Ultrasound Analysis Suite",
+    "organs": [
+      {
+        "organ_name": "Heart",
+        "status": "Abnormal",
+        "volumetry": null,
+        "metrics": [
+          {
+            "name": "LVEF_Auto",
+            "value": 59.576300436228045,
+            "unit": "percent",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "LVEDV",
+            "value": 120.0,
+            "unit": "ml",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "LVESV",
+            "value": 55.0,
+            "unit": "ml",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "GlobalLongitudinalStrain",
+            "value": -18.5,
+            "unit": "percent",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "E_Velocity",
+            "value": 0.8,
+            "unit": "m/s",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "A_Velocity",
+            "value": 0.6,
+            "unit": "m/s",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "EA_Ratio",
+            "value": 1.33,
+            "unit": "ratio",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          }
+        ],
+        "regions": []
+      }
+    ],
+    "global_findings": [
+      {
+        "id": "81048ebf-74eb-4774-8c60-2946cd6af552",
+        "label": "Normal LV Function",
+        "probability": 0.98,
+        "severity": "Unknown",
+        "location": null,
+        "attributes": {}
+      }
+    ],
+    "global_metrics": [
+      {
+        "name": "FrameRate",
+        "value": 60,
+        "unit": "Hz",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "MechanicalIndex",
+        "value": 0.9,
+        "unit": "MI",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      }
+    ],
+    "generated_at": 1765401285.804222,
+    "rhenium_version": "2025.12"
+  },
+  "maps": [
+    {
+      "id": "us_enhanced",
+      "type": "EnhancedBMode",
+      "description": "Despeckled Ultrasound",
+      "file_path": "us_enhanced.png",
+      "dimensions": [
+        800,
+        600
+      ],
+      "resolution": [
+        0.2,
+        0.2
+      ]
+    }
+  ],
+  "xai_overlays": [],
+  "logs": [
+    "[0.001s] [Orchestrator] Starting pipeline: Ultrasound Analysis Suite",
+    "[0.001s] [Orchestrator] Executing stage: USIngestStage",
+    "[0.001s] [Ingest] Loading Ultrasound frames...",
+    "[0.012s] [Orchestrator] Executing stage: USEnhancementStage",
+    "[0.013s] [Enhance] Speckle reduction complete.",
+    "[0.013s] [Orchestrator] Executing stage: USPerceptionStage",
+    "[0.013s] [Orchestrator] Finished pipeline: Ultrasound Analysis Suite"
+  ],
+  "model_info": []
+}

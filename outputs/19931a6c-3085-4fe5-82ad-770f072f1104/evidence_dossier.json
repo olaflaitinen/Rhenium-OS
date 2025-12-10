@@ -1,0 +1,193 @@
+{
+  "case_id": "19931a6c-3085-4fe5-82ad-770f072f1104",
+  "study_output": {
+    "patient_id": "A-101",
+    "study_date": "2025-12-10",
+    "modality": "X-ray",
+    "protocol": "Chest X-ray Analysis",
+    "organs": [
+      {
+        "organ_name": "Lungs",
+        "status": "Normal",
+        "volumetry": null,
+        "metrics": [
+          {
+            "name": "TotalLungArea",
+            "value": 45000.0,
+            "unit": "mm2",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "LungTranslucency",
+            "value": 0.65,
+            "unit": "ratio",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "CostophrenicAngleSharpness_Left",
+            "value": 85.0,
+            "unit": "deg",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "CostophrenicAngleSharpness_Right",
+            "value": 88.0,
+            "unit": "deg",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          }
+        ],
+        "regions": []
+      },
+      {
+        "organ_name": "Heart",
+        "status": "Normal",
+        "volumetry": null,
+        "metrics": [
+          {
+            "name": "CardioThoracicRatio",
+            "value": 0.42,
+            "unit": "ratio",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "HeartWidth",
+            "value": 120.0,
+            "unit": "mm",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "ThoraxWidth",
+            "value": 290.0,
+            "unit": "mm",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          }
+        ],
+        "regions": []
+      }
+    ],
+    "global_findings": [
+      {
+        "id": "4eb7ad15-471d-43a6-9c41-e3654fc62451",
+        "label": "Normal Study",
+        "probability": 1.0,
+        "severity": "Unknown",
+        "location": null,
+        "attributes": {
+          "critical": false
+        }
+      }
+    ],
+    "global_metrics": [
+      {
+        "name": "InputImageWidth",
+        "value": 1024,
+        "unit": "px",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "InputImageHeight",
+        "value": 1024,
+        "unit": "px",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "ExposureIndex",
+        "value": 320,
+        "unit": "EI",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "PreprocessedMeanIntensity",
+        "value": 0.4997004568576813,
+        "unit": "AU",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "PreprocessedStdDev",
+        "value": 0.2885667085647583,
+        "unit": "AU",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "AbnormalityScore",
+        "value": 0.1,
+        "unit": "prob",
+        "confidence_interval": {
+          "low": 0,
+          "high": 0.2,
+          "level": 0.95
+        },
+        "reference_range": null,
+        "source_method": "AI Model"
+      }
+    ],
+    "generated_at": 1765401285.7497299,
+    "rhenium_version": "2025.12"
+  },
+  "maps": [
+    {
+      "id": "map_processed",
+      "type": "ProcessedImage",
+      "description": "Normalized X-ray",
+      "file_path": "processed.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "resolution": [
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "id": "map_bonesuppressed",
+      "type": "BoneSuppressedImage",
+      "description": "Soft Tissue Only",
+      "file_path": "bs_image.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "resolution": [
+        0.14,
+        0.14
+      ]
+    }
+  ],
+  "xai_overlays": [],
+  "logs": [
+    "[0.002s] [Orchestrator] Starting pipeline: Chest X-ray Analysis",
+    "[0.002s] [Orchestrator] Executing stage: XRayIngestStage",
+    "[0.002s] [Ingest] Loading DICOM data...",
+    "[0.022s] [Orchestrator] Executing stage: XRayEnhancementStage",
+    "[0.022s] [Enhance] Running Preprocessing...",
+    "[0.037s] [Enhance] Running Bone Suppression...",
+    "[0.037s] [Orchestrator] Executing stage: CXRPerceptionStage",
+    "[0.037s] [Orchestrator] Finished pipeline: Chest X-ray Analysis"
+  ],
+  "model_info": []
+}

@@ -172,4 +172,4 @@ Skolyn Rhenium OS represents a paradigm shift in medical imaging AI: from isolat
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
-**SPDX-License-Identifier: EUPL-1.1**
+****

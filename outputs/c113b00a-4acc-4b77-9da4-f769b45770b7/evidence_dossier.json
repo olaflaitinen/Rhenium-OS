@@ -1,0 +1,280 @@
+{
+  "case_id": "c113b00a-4acc-4b77-9da4-f769b45770b7",
+  "study_output": {
+    "patient_id": "B-202",
+    "study_date": "2025-12-10",
+    "modality": "CT",
+    "protocol": "CT Analysis Suite",
+    "organs": [
+      {
+        "organ_name": "Lungs",
+        "status": "Indeterminate",
+        "volumetry": {
+          "name": "TotalLungVolume",
+          "value": 4200.5,
+          "unit": "cm3",
+          "confidence_interval": null,
+          "reference_range": null,
+          "source_method": "AI Model"
+        },
+        "metrics": [
+          {
+            "name": "RightLungVolume",
+            "value": 2200.0,
+            "unit": "cm3",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "LeftLungVolume",
+            "value": 2000.5,
+            "unit": "cm3",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "MeanLungDensity",
+            "value": -850.0,
+            "unit": "HU",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          },
+          {
+            "name": "EmphysemaIndex",
+            "value": 2.5,
+            "unit": "percent",
+            "confidence_interval": null,
+            "reference_range": null,
+            "source_method": "AI Model"
+          }
+        ],
+        "regions": [
+          {
+            "id": "nodule_0",
+            "type": "LungNodule",
+            "location": {
+              "slice": 45,
+              "x": 200,
+              "y": 200
+            },
+            "measurements": [
+              {
+                "name": "Volume",
+                "value": 144.2340887203776,
+                "unit": "mm3",
+                "confidence_interval": null,
+                "reference_range": null,
+                "source_method": "AI Model"
+              },
+              {
+                "name": "Diameter",
+                "value": 8.083742409499306,
+                "unit": "mm",
+                "confidence_interval": null,
+                "reference_range": null,
+                "source_method": "AI Model"
+              },
+              {
+                "name": "MeanHU",
+                "value": 65.40677413328882,
+                "unit": "HU",
+                "confidence_interval": null,
+                "reference_range": null,
+                "source_method": "AI Model"
+              }
+            ],
+            "findings": [
+              {
+                "id": "d4ff50cd-c465-46c8-a424-52d861c203b2",
+                "label": "Solid",
+                "probability": 0.9,
+                "severity": "Unknown",
+                "location": null,
+                "attributes": {}
+              }
+            ],
+            "associated_maps": []
+          },
+          {
+            "id": "nodule_1",
+            "type": "LungNodule",
+            "location": {
+              "slice": 45,
+              "x": 200,
+              "y": 200
+            },
+            "measurements": [
+              {
+                "name": "Volume",
+                "value": 74.60159810193903,
+                "unit": "mm3",
+                "confidence_interval": null,
+                "reference_range": null,
+                "source_method": "AI Model"
+              },
+              {
+                "name": "Diameter",
+                "value": 6.38011915166361,
+                "unit": "mm",
+                "confidence_interval": null,
+                "reference_range": null,
+                "source_method": "AI Model"
+              },
+              {
+                "name": "MeanHU",
+                "value": 53.41479049717735,
+                "unit": "HU",
+                "confidence_interval": null,
+                "reference_range": null,
+                "source_method": "AI Model"
+              }
+            ],
+            "findings": [
+              {
+                "id": "99d285bf-ee8e-49a1-8a68-1b576a56a64d",
+                "label": "Solid",
+                "probability": 0.9,
+                "severity": "Unknown",
+                "location": null,
+                "attributes": {}
+              }
+            ],
+            "associated_maps": []
+          },
+          {
+            "id": "nodule_2",
+            "type": "LungNodule",
+            "location": {
+              "slice": 45,
+              "x": 200,
+              "y": 200
+            },
+            "measurements": [
+              {
+                "name": "Volume",
+                "value": 79.34004154723448,
+                "unit": "mm3",
+                "confidence_interval": null,
+                "reference_range": null,
+                "source_method": "AI Model"
+              },
+              {
+                "name": "Diameter",
+                "value": 6.51308895184313,
+                "unit": "mm",
+                "confidence_interval": null,
+                "reference_range": null,
+                "source_method": "AI Model"
+              },
+              {
+                "name": "MeanHU",
+                "value": 40.701034155082915,
+                "unit": "HU",
+                "confidence_interval": null,
+                "reference_range": null,
+                "source_method": "AI Model"
+              }
+            ],
+            "findings": [
+              {
+                "id": "3c2e4ab8-cf3d-44e0-a5a8-c9e12fcab50a",
+                "label": "Solid",
+                "probability": 0.9,
+                "severity": "Unknown",
+                "location": null,
+                "attributes": {}
+              }
+            ],
+            "associated_maps": []
+          }
+        ]
+      }
+    ],
+    "global_findings": [
+      {
+        "id": "99281065-504e-4e6c-97a1-cd270c67469b",
+        "label": "Multiple Lung Nodules",
+        "probability": 0.95,
+        "severity": "Unknown",
+        "location": null,
+        "attributes": {}
+      }
+    ],
+    "global_metrics": [
+      {
+        "name": "TubeCurrent",
+        "value": 200,
+        "unit": "mA",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "TubeVoltage",
+        "value": 120,
+        "unit": "kVp",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "RotationTime",
+        "value": 0.5,
+        "unit": "s",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "ReconNoiseLevel",
+        "value": 12.5,
+        "unit": "HU",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      },
+      {
+        "name": "ReconSharpness",
+        "value": 0.85,
+        "unit": "MTF",
+        "confidence_interval": null,
+        "reference_range": null,
+        "source_method": "AI Model"
+      }
+    ],
+    "generated_at": 1765401285.7922697,
+    "rhenium_version": "2025.12"
+  },
+  "maps": [
+    {
+      "id": "vol_recon",
+      "type": "ReconstructedVolume",
+      "description": "DL Reconstructed CT",
+      "file_path": "recon_vol.nii.gz",
+      "dimensions": [
+        512,
+        512,
+        100
+      ],
+      "resolution": [
+        0.6,
+        0.6,
+        1.0
+      ]
+    }
+  ],
+  "xai_overlays": [],
+  "logs": [
+    "[0.001s] [Orchestrator] Starting pipeline: CT Analysis Suite",
+    "[0.001s] [Orchestrator] Executing stage: CTIngestStage",
+    "[0.001s] [Ingest] Loading CT Sinogram/Volume...",
+    "[0.005s] [Orchestrator] Executing stage: CTReconStage",
+    "[0.005s] [Recon] DL Reconstruction complete.",
+    "[0.005s] [Orchestrator] Executing stage: CTPerceptionStage",
+    "[0.006s] [Orchestrator] Finished pipeline: CT Analysis Suite"
+  ],
+  "model_info": []
+}
