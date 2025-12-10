@@ -47,7 +47,7 @@ Thumbs.db
 *.dcm
 *.h5
 *.hdf5
-data/
+/data/
 models/
 logs/
 cache/
