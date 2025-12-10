@@ -331,6 +331,5 @@ Rhenium OS is developed by **Skolyn LLC** in collaboration with academic and cli
 
 ---
 
-**Last Updated: December 2025**
-
+**
 Copyright (c) 2025 Skolyn LLC. All rights reserved.

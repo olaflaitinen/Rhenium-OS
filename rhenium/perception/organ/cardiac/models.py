@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Rhenium OS Cardiac MRI Perception Module
@@ -8,9 +7,8 @@ Rhenium OS Cardiac MRI Perception Module
 Cardiac MRI analysis including LV/RV segmentation, ejection fraction
 estimation, and late gadolinium enhancement (LGE) scar quantification.
 
-Skolyn: Early. Accurate. Trusted.
 
-Last Updated: December 2025
+
 """
 
 from __future__ import annotations

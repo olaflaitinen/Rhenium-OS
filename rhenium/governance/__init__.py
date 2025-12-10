@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Governance Module
@@ -8,7 +7,6 @@ Governance Module
 Audit, model cards, fairness, compliance, and risk management for
 regulatory-ready medical imaging AI.
 
-Last Updated: December 2025
 """
 
 from rhenium.governance.audit_log import AuditLogger, log_pipeline_run, AuditEntry

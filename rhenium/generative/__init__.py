@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Generative Models Module
@@ -14,7 +13,6 @@ Synthetic image content may introduce artifacts that could be mistaken for
 pathology or obscure real findings. All outputs must be clearly labeled
 and subject to human review before clinical use.
 
-Last Updated: December 2025
 """
 
 from rhenium.generative.super_resolution import (

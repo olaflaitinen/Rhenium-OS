@@ -1,7 +1,6 @@
 # Core Architecture: Rhenium OS
 
-**Last Updated: December 2025**
-
+**
 ---
 
 ## Package Structure

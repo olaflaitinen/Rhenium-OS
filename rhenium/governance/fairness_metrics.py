@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Fairness Metrics Module
@@ -9,7 +8,6 @@ Metrics for evaluating algorithmic fairness across demographic subgroups,
 institutions, and scanner vendors. Supports stratified performance analysis
 and bias detection as required by EU AI Act and clinical best practices.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Base PINN Classes
@@ -8,7 +7,6 @@ Base PINN Classes
 Abstract base classes and interfaces for Physics-Informed Neural Networks
 in medical imaging reconstruction.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Anomaly Detection Models
@@ -15,7 +14,6 @@ distribution, not definitive pathology. False positives may occur for
 normal variants, and false negatives may occur for pathologies similar
 to training data. All findings require clinical correlation.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

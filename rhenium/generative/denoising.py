@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Denoising Models
@@ -13,7 +12,6 @@ Denoising may remove fine structures that could be clinically relevant.
 Always compare denoised outputs with original images and exercise caution
 when small features are critical for diagnosis.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

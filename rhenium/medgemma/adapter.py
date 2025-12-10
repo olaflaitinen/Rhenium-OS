@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 MedGemma Adapter
@@ -9,7 +8,6 @@ Abstract interface for MedGemma integration, supporting local and remote deploym
 Provides structured interfaces for report generation, explanation, consistency
 validation, and multi-turn clinical dialogs.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

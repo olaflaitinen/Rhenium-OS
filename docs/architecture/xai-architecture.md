@@ -1,7 +1,6 @@
 # XAI Architecture
 
-**Last Updated: December 2025**
-
+**
 ---
 
 ## Overview

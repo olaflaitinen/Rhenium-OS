@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Physics-Informed Neural Networks (PINNs) Module
@@ -8,7 +7,6 @@ Physics-Informed Neural Networks (PINNs) Module
 Abstractions for physics-constrained deep learning in medical imaging
 reconstruction and quantitative mapping.
 
-Last Updated: December 2025
 """
 
 from rhenium.reconstruction.pinns.base_pinn import (

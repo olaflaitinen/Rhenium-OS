@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Fairness Reports Module
@@ -8,7 +7,6 @@ Fairness Reports Module
 Generation of comprehensive fairness evaluation reports in human-readable
 and machine-readable formats.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

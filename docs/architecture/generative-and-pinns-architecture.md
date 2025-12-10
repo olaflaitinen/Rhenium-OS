@@ -1,7 +1,6 @@
 # Generative Models and Physics-Informed Neural Networks Architecture
 
-**Last Updated: December 2025**
-
+**
 ---
 
 ## Overview

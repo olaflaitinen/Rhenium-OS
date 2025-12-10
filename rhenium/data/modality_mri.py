@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Rhenium OS MRI Modality Support
@@ -17,9 +16,8 @@ Supported MRI Categories:
 - Cardiac: Cine, LGE, T1/T2 mapping, phase-contrast flow
 - Whole-body/Oncologic: DWIBS, mpMRI prostate, breast DCE
 
-Skolyn: Early. Accurate. Trusted.
 
-Last Updated: December 2025
+
 """
 
 from __future__ import annotations

@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Super-Resolution Models
@@ -14,7 +13,6 @@ was not present in the original acquisition. Generated details must not
 be interpreted as genuine anatomical or pathological features without
 radiologist verification.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

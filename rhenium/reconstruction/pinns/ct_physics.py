@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 CT Physics Constraints
@@ -8,7 +7,6 @@ CT Physics Constraints
 Physics-informed neural networks for CT reconstruction incorporating
 X-ray attenuation physics and projection geometry.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

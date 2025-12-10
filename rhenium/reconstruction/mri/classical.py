@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Rhenium OS MRI Classical Reconstruction
@@ -8,9 +7,8 @@ Rhenium OS MRI Classical Reconstruction
 Classical MRI reconstruction methods including FFT-based reconstruction,
 parallel imaging (GRAPPA, SENSE), and coil combination strategies.
 
-Skolyn: Early. Accurate. Trusted.
 
-Last Updated: December 2025
+
 """
 
 from __future__ import annotations

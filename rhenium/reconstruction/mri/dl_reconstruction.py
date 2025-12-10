@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Rhenium OS MRI Deep Learning Reconstruction
@@ -8,9 +7,8 @@ Rhenium OS MRI Deep Learning Reconstruction
 Deep learning-based MRI reconstruction methods including U-Net,
 variational networks, and unrolled optimization models.
 
-Skolyn: Early. Accurate. Trusted.
 
-Last Updated: December 2025
+
 """
 
 from __future__ import annotations

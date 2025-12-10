@@ -1,7 +1,6 @@
 # Metrics Mathematical Appendix
 
-**Last Updated: December 2025**
-
+**
 ---
 
 ## Overview

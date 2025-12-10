@@ -1,7 +1,6 @@
 # XAI Design Principles: Skolyn Rhenium OS
 
-**Last Updated: December 2025**
-
+**
 ---
 
 ## Introduction

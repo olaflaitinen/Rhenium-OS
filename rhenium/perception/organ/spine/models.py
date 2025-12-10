@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Rhenium OS Spine MRI Perception Module
@@ -8,9 +7,8 @@ Rhenium OS Spine MRI Perception Module
 Spine MRI analysis including disc herniation detection, spinal canal
 stenosis assessment, and vertebral fracture detection.
 
-Skolyn: Early. Accurate. Trusted.
 
-Last Updated: December 2025
+
 """
 
 from __future__ import annotations

@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Rhenium OS Lung CT Perception Module
@@ -8,9 +7,8 @@ Rhenium OS Lung CT Perception Module
 Lung CT analysis including nodule detection, PE detection,
 emphysema quantification, and lung segmentation.
 
-Skolyn: Early. Accurate. Trusted.
 
-Last Updated: December 2025
+
 """
 
 from __future__ import annotations

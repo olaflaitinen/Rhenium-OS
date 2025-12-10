@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Skolyn Rhenium OS
@@ -14,7 +13,6 @@ of proprietary deep learning models, including Physics-Informed Neural Networks
 Transformers, and 3D CNNs. Rhenium OS delivers unprecedented speed, accuracy,
 and transparency across MRI, CT, Ultrasound, and X-ray modalities.
 
-Last Updated: December 2025
 """
 
 from importlib.metadata import version, PackageNotFoundError

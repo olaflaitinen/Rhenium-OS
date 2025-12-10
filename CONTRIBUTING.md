@@ -1,7 +1,6 @@
 # Contributing to Rhenium OS
 
-**Last Updated: December 2025**
-
+**
 ---
 
 ## Introduction

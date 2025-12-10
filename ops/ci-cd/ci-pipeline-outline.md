@@ -1,7 +1,6 @@
 # CI/CD Pipeline Outline
 
-**Last Updated: December 2025**
-
+**
 ---
 
 ## Overview

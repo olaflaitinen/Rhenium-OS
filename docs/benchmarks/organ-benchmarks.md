@@ -1,7 +1,6 @@
 # Organ-Specific Benchmarks
 
-**Last Updated: December 2025**
-
+**
 ---
 
 ## Overview

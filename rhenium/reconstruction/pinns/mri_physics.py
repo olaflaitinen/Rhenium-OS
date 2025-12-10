@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 MRI Physics Constraints
@@ -8,7 +7,6 @@ MRI Physics Constraints
 Physics-informed neural networks incorporating MR signal equations,
 Bloch dynamics, and relaxometry constraints.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

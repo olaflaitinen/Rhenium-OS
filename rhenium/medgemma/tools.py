@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 MedGemma Tool-Use Framework
@@ -8,7 +7,6 @@ MedGemma Tool-Use Framework
 Complementary reasoning tools that MedGemma can invoke for enhanced
 clinical reasoning, validation, and guideline alignment.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

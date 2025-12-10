@@ -1,8 +1,7 @@
 # CT Benchmarks
 
-**Last Updated: December 2025**
-
-**Skolyn: Early. Accurate. Trusted.**
+**
+****
 
 ---
 

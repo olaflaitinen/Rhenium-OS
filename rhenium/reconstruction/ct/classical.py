@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Rhenium OS CT Classical Reconstruction
@@ -8,9 +7,8 @@ Rhenium OS CT Classical Reconstruction
 Classical CT reconstruction methods including Filtered Backprojection (FBP),
 iterative reconstruction, and convolution kernels.
 
-Skolyn: Early. Accurate. Trusted.
 
-Last Updated: December 2025
+
 """
 
 from __future__ import annotations

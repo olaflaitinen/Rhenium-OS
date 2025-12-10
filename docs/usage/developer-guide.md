@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 Developer Guide: Rhenium OS
@@ -8,7 +7,6 @@ Developer Guide: Rhenium OS
 This guide provides detailed instructions for developers working with
 or extending Skolyn Rhenium OS.
 
-Last Updated: December 2025
 """
 
 # Developer Guide

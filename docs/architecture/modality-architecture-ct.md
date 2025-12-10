@@ -1,8 +1,7 @@
 # CT Modality Architecture
 
-**Last Updated: December 2025**
-
-**Skolyn: Early. Accurate. Trusted.**
+**
+****
 
 ---
 

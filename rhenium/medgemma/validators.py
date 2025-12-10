@@ -1,5 +1,4 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
-# SPDX-License-Identifier: EUPL-1.1
 
 """
 MedGemma Validators
@@ -9,7 +8,6 @@ Safety checks and validation logic for MedGemma outputs. These validators
 ensure consistency, plausibility, and flag high-risk outputs for mandatory
 human review.
 
-Last Updated: December 2025
 """
 
 from __future__ import annotations

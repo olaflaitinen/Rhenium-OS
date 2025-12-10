@@ -1,7 +1,6 @@
 # Multi-Modality Reference
 
-**Last Updated: December 2025**
-
+**
 ---
 
 ## Overview
