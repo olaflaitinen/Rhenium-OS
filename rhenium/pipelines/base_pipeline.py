@@ -1,0 +1,146 @@
+# Copyright (c) 2025 Skolyn LLC. All rights reserved.
+# SPDX-License-Identifier: EUPL-1.1
+
+"""
+Base Pipeline
+=============
+
+Abstract pipeline class for end-to-end medical imaging analysis.
+"""
+
+from __future__ import annotations
+
+from abc import ABC, abstractmethod
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+from uuid import uuid4
+
+from rhenium.core.logging import get_pipeline_logger
+from rhenium.data.dicom_io import DICOMStudy, DICOMSeries, ImageVolume
+from rhenium.xai.explanation_schema import Finding
+from rhenium.xai.evidence_dossier import EvidenceDossier
+
+logger = get_pipeline_logger()
+
+
+@dataclass
+class PipelineResult:
+    """Result from a pipeline execution."""
+    run_id: str = field(default_factory=lambda: uuid4().hex[:12])
+    pipeline_name: str = ""
+    pipeline_version: str = ""
+    status: str = "success"  # success, failed, partial
+    findings: list[Finding] = field(default_factory=list)
+    dossiers: list[EvidenceDossier] = field(default_factory=list)
+    report_draft: Any = None
+    execution_time_seconds: float = 0.0
+    started_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    completed_at: datetime | None = None
+    errors: list[str] = field(default_factory=list)
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize result."""
+        return {
+            "run_id": self.run_id,
+            "pipeline_name": self.pipeline_name,
+            "pipeline_version": self.pipeline_version,
+            "status": self.status,
+            "num_findings": len(self.findings),
+            "findings": [f.to_dict() for f in self.findings],
+            "execution_time_seconds": self.execution_time_seconds,
+            "started_at": self.started_at.isoformat(),
+            "completed_at": self.completed_at.isoformat() if self.completed_at else None,
+            "errors": self.errors,
+        }
+
+
+class BasePipeline(ABC):
+    """
+    Abstract base class for analysis pipelines.
+
+    Pipelines orchestrate the full workflow:
+    1. Load input data
+    2. Run reconstruction (if applicable)
+    3. Run perception models
+    4. Generate XAI artifacts
+    5. Generate MedGemma explanations
+    6. Assemble results
+    """
+
+    name: str = "base_pipeline"
+    version: str = "1.0.0"
+
+    def __init__(self, config: dict[str, Any] | None = None):
+        self.config = config or {}
+        self._result: PipelineResult | None = None
+
+    @abstractmethod
+    def load_input(self, source: DICOMStudy | DICOMSeries | ImageVolume | Path) -> None:
+        """Load input data."""
+        pass
+
+    @abstractmethod
+    def run_reconstruction(self) -> None:
+        """Run reconstruction step (if applicable)."""
+        pass
+
+    @abstractmethod
+    def run_analysis(self) -> None:
+        """Run perception models."""
+        pass
+
+    @abstractmethod
+    def run_xai(self) -> None:
+        """Generate XAI artifacts."""
+        pass
+
+    @abstractmethod
+    def run_medgemma_explanation(self) -> None:
+        """Generate MedGemma explanations."""
+        pass
+
+    @abstractmethod
+    def assemble_results(self) -> PipelineResult:
+        """Assemble final results."""
+        pass
+
+    def run(self, source: DICOMStudy | DICOMSeries | ImageVolume | Path) -> PipelineResult:
+        """Execute full pipeline."""
+        import time
+        start_time = time.time()
+
+        logger.info("Starting pipeline", name=self.name, version=self.version)
+
+        result = PipelineResult(
+            pipeline_name=self.name,
+            pipeline_version=self.version,
+        )
+
+        try:
+            self.load_input(source)
+            self.run_reconstruction()
+            self.run_analysis()
+            self.run_xai()
+            self.run_medgemma_explanation()
+            result = self.assemble_results()
+            result.status = "success"
+
+        except Exception as e:
+            logger.error("Pipeline failed", error=str(e))
+            result.status = "failed"
+            result.errors.append(str(e))
+
+        result.completed_at = datetime.now(timezone.utc)
+        result.execution_time_seconds = time.time() - start_time
+
+        logger.info(
+            "Pipeline complete",
+            status=result.status,
+            duration=f"{result.execution_time_seconds:.2f}s",
+            num_findings=len(result.findings),
+        )
+
+        return result

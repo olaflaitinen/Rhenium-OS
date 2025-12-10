@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  rhenium:
+    build:
+      context: ../..
+      dockerfile: ops/docker/Dockerfile
+    volumes:
+      - ${RHENIUM_DATA_DIR:-./data}:/data
+      - ${RHENIUM_MODELS_DIR:-./models}:/models
+      - ${RHENIUM_LOGS_DIR:-./logs}:/logs
+    environment:
+      - RHENIUM_DEVICE=cpu
+      - RHENIUM_MEDGEMMA_BACKEND=stub
+    ports:
+      - "8000:8000"
+
+  rhenium-gpu:
+    build:
+      context: ../..
+      dockerfile: ops/docker/Dockerfile.gpu
+    volumes:
+      - ${RHENIUM_DATA_DIR:-./data}:/data
+      - ${RHENIUM_MODELS_DIR:-./models}:/models
+    environment:
+      - RHENIUM_DEVICE=cuda
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]

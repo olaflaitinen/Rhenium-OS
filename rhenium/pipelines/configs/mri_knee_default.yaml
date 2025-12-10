@@ -1,0 +1,63 @@
+# Rhenium OS Pipeline Configuration
+# Knee MRI Default Pipeline
+
+name: mri_knee_default
+version: "1.0.0"
+description: "Standard knee MRI analysis pipeline"
+
+pipeline_type: mri_knee
+
+# Input configuration
+input:
+  modality: MR
+  body_part: KNEE
+  required_sequences:
+    - PD_FS
+    - T2
+    - T1
+
+# Reconstruction settings
+reconstruction:
+  enabled: false  # Assume DICOM input is already reconstructed
+  method: rhenium_deep
+  denoise: true
+
+# Perception models
+perception:
+  meniscus:
+    enabled: true
+    model: meniscus_segmentation_v1
+    threshold: 0.5
+  cartilage:
+    enabled: true
+    model: cartilage_grading_v1
+    grades: [0, 1, 2, 3, 4]
+  ligaments:
+    enabled: true
+    model: ligament_detection_v1
+    targets: [acl, pcl, mcl, lcl]
+
+# XAI settings
+xai:
+  visual:
+    enabled: true
+    types: [segmentation_overlay, attention_map]
+  quantitative:
+    enabled: true
+    measurements: [volume, max_diameter]
+    radiomics: true
+  narrative:
+    enabled: true
+
+# MedGemma settings
+medgemma:
+  enabled: true
+  template: mri_knee
+  generate_report: true
+  explain_findings: true
+
+# Output settings
+output:
+  format: json
+  include_dossiers: true
+  include_images: false

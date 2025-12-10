@@ -1,0 +1,97 @@
+# Rhenium OS Pipeline Configuration
+# Chest X-ray Abnormality Detection Pipeline
+
+name: xray_chest_abnormality
+version: "1.0.0"
+description: "Multi-label chest X-ray abnormality detection and classification"
+
+pipeline_type: xray_chest
+
+# Input configuration
+input:
+  modality: CR  # Computed Radiography
+  body_part: CHEST
+  views:
+    - PA  # Posteroanterior
+    - AP  # Anteroposterior
+    - LATERAL
+
+# Preprocessing steps
+preprocessing:
+  steps:
+    - type: orientation_correction
+      params:
+        enforce_upright: true
+    - type: lung_field_detection
+      params:
+        method: deep_learning
+    - type: intensity_normalization
+      params:
+        method: histogram_equalization
+    - type: resize
+      params:
+        target_size: [1024, 1024]
+        preserve_aspect: true
+
+# Perception models
+perception:
+  multi_label_classification:
+    enabled: true
+    model: chest_xray_classifier_v3
+    labels:
+      - cardiomegaly
+      - pleural_effusion
+      - consolidation
+      - pneumothorax
+      - atelectasis
+      - edema
+      - emphysema
+      - fibrosis
+      - nodule_mass
+      - infiltration
+    threshold: 0.5
+  cardiomegaly_measurement:
+    enabled: true
+    model: cardiothoracic_ratio_v1
+  nodule_detection:
+    enabled: true
+    model: lung_nodule_detection_xray_v1
+    threshold: 0.3
+
+# Quantitative analysis
+quantification:
+  cardiothoracic_ratio: true
+  lung_opacity_percent: true
+  pleural_effusion_estimate: true
+
+# XAI settings
+xai:
+  visual:
+    enabled: true
+    types:
+      - saliency_map
+      - bounding_box_overlay
+      - ctr_measurement_lines
+  quantitative:
+    enabled: true
+    measurements:
+      - cardiothoracic_ratio
+      - finding_confidence
+  narrative:
+    enabled: true
+
+# MedGemma settings
+medgemma:
+  enabled: true
+  template: xray_chest_radiography
+  generate_report: true
+  explain_findings: true
+  validators:
+    - narrative_consistency
+    - high_risk
+
+# Output settings
+output:
+  format: json
+  include_dossiers: true
+  structured_findings: true
