@@ -1,13 +1,10 @@
 # Copyright (c) 2025 Skolyn LLC. All rights reserved.
 
-"""
 Developer Guide: Rhenium OS
 ===========================
 
 This guide provides detailed instructions for developers working with
 or extending Skolyn Rhenium OS.
-
-"""
 
 # Developer Guide
 
