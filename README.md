@@ -2,13 +2,30 @@
 
 **State-of-the-Art Multi-Modality AI Operating System for Diagnostic Medical Imaging**
 
-*Early. Accurate. Trusted.*
-
+<!-- Core Badges -->
 [![License: EUPL-1.1](https://img.shields.io/badge/License-EUPL--1.1-blue.svg)](LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-green.svg)](https://www.python.org/)
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/skolyn/rhenium-os/actions)
-[![Coverage](https://img.shields.io/badge/Coverage-85%25-yellowgreen.svg)](https://github.com/skolyn/rhenium-os)
-[![Code Quality](https://img.shields.io/badge/Code%20Quality-A-brightgreen.svg)](https://github.com/skolyn/rhenium-os)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![CUDA](https://img.shields.io/badge/CUDA-11.8%2B-76B900.svg?logo=nvidia&logoColor=white)](https://developer.nvidia.com/cuda-toolkit)
+
+<!-- Quality Badges -->
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg?logo=github-actions&logoColor=white)](https://github.com/skolyn/rhenium-os/actions)
+[![Coverage](https://img.shields.io/badge/Coverage-85%25-yellowgreen.svg?logo=codecov&logoColor=white)](https://github.com/skolyn/rhenium-os)
+[![Code Quality](https://img.shields.io/badge/Code%20Quality-A-brightgreen.svg?logo=codacy&logoColor=white)](https://github.com/skolyn/rhenium-os)
+[![Security](https://img.shields.io/badge/Security-Scanned-green.svg?logo=snyk&logoColor=white)](https://github.com/skolyn/rhenium-os)
+
+<!-- Status Badges -->
+[![Documentation](https://img.shields.io/badge/Docs-Available-blue.svg?logo=readthedocs&logoColor=white)](docs/)
+[![API](https://img.shields.io/badge/API-Stable-green.svg?logo=fastapi&logoColor=white)](docs/api/)
+[![Modalities](https://img.shields.io/badge/Modalities-MRI%20%7C%20CT%20%7C%20US%20%7C%20XR-orange.svg?logo=dicom&logoColor=white)](docs/modalities/)
+
+<!-- Regulatory and Standards -->
+[![EU MDR](https://img.shields.io/badge/EU%20MDR-Aligned-blue.svg)](docs/regulatory/)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-blue.svg)](docs/regulatory/)
+[![DICOM](https://img.shields.io/badge/DICOM-Compliant-informational.svg)](https://www.dicomstandard.org/)
+
+<!-- Project Info -->
+[![MedGemma](https://img.shields.io/badge/MedGemma-27B%20Multimodal-4285F4.svg?logo=google&logoColor=white)](docs/architecture/medgemma-integration.md)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-December%202025-informational.svg)](https://github.com/skolyn/rhenium-os)
 
 ---
@@ -41,6 +58,7 @@ Rhenium OS is a complete AI operating system with integrated subsystems powered 
 |-----------|------|-----------------|
 | **Rhenium Reconstruction Engine** | Deep learning reconstruction from raw acquisition data (k-space, sinograms) | PINNs, U-Net, GANs |
 | **Rhenium Perception Engine** | Detection, segmentation, classification, and quantification | nnU-Net, Vision Transformers, 3D CNNs |
+| **Rhenium Disease Reasoning Layer** | Structured disease-level clinical reasoning (presence, identity, staging, trajectory) | Rule-based and ML-based inference |
 | **Rhenium Generative Engine** | Super-resolution, denoising, augmentation | GANs, Diffusion Models |
 | **Rhenium XAI Engine** | Visual, quantitative, and narrative evidence generation | Saliency, Attention, Uncertainty |
 | **Rhenium Governance Layer** | Audit logging, fairness monitoring, regulatory compliance | Calibration Networks |
@@ -128,6 +146,73 @@ Every finding in Rhenium OS is accompanied by an **Evidence Dossier** comprising
 
 ---
 
+## Core AI and Rhenium OS Team
+
+Rhenium OS is developed by Skolyn's multidisciplinary teams spanning AI research, machine learning engineering, medical data analysis, and product design. For the complete team roster with detailed responsibilities, see [docs/team/AI_AND_RHENIUM_OS_TEAM.md](docs/team/AI_AND_RHENIUM_OS_TEAM.md).
+
+### Executive Leadership
+
+| Name | Title | Email |
+|------|-------|-------|
+| Ahmet Yasir Duman | Chief AI Officer (CAIO) | ahmet.duman@skolyn.se |
+
+### Core Engineering and AI Infrastructure
+
+| Name | Title | Team | Email |
+|------|-------|------|-------|
+| Zahid Manafli | Engineering Lead | Core Engineering / Rhenium OS | zahid.manafli@skolyn.se |
+| Kaan Can | Frontend Engineer | Rhenium OS Frontend | kaan.can@skolyn.se |
+| Tabriz Latifov | DevOps Engineer | AI Infrastructure / DevOps | tabriz.latifov@skolyn.se |
+| Rauf Asadov | MLOps Engineer | AI Infrastructure / MLOps | rauf.asadov@skolyn.se |
+
+### Artificial Intelligence Department
+
+#### AI Team 1 (Perception, Reconstruction, Modality Pipelines)
+
+| Name | Title | Email |
+|------|-------|-------|
+| Rajab Iskandarli | Lead AI Engineer | rajab.iskandarli@skolyn.se |
+| Arzu Ismayilzada | Data Scientist | arzu.ismayilzada@skolyn.se |
+| Fatima Alibabayeva | Data Scientist | fatima.alibabayeva@skolyn.se |
+| Khayal Aghazada | Machine Learning Engineer | khayal.aghazada@skolyn.se |
+| Gorkhmaz Shahbazli | Machine Learning Engineer | gorkhmaz.shahbazli@skolyn.se |
+| Nijat Zakarya | Machine Learning Engineer | nijat.zakarya@skolyn.se |
+| Rza Mirzayev | Machine Learning Engineer | rza.mirzayev@skolyn.se |
+| Tural Asgarov | Machine Learning Engineer | tural.asgarov@skolyn.se |
+
+#### AI Team 2 (Generative Models, PINNs, XAI, MedGemma)
+
+| Name | Title | Email |
+|------|-------|-------|
+| Ibrahim Kutay Shahin | Lead AI Engineer | ibrahim.shahin@skolyn.se |
+| Tural Mammadli | Machine Learning Engineer | tural.mammadli@skolyn.se |
+| Roza Gasimova | Bioinformatician | roza.gasimova@skolyn.se |
+| Ayan Jabizada | Bioinformatician | ayan.jabizada@skolyn.se |
+| Bushra Deveci | Scientist | bushra.deveci@skolyn.se |
+| Asli Nur Ekinci | Machine Learning Engineer | asli.ekinci@skolyn.se |
+| Bahunur Ipek | Machine Learning Engineer | bahunur.ipek@skolyn.se |
+| Efe Hakan Yildiz | Machine Learning Engineer | efe.yildiz@skolyn.se |
+| Fatih Kadim | Machine Learning Engineer | fatih.kadim@skolyn.se |
+| Kubra Demir | Machine Learning Engineer | kubra.demir@skolyn.se |
+| Melike Dogan | Machine Learning Engineer | melike.dogan@skolyn.se |
+
+### Medical Data Analysis
+
+| Name | Title | Email |
+|------|-------|-------|
+| Nargiz Ismayilli | Medical Data Analyst Team Lead | nargiz.ismayilli@skolyn.se |
+
+### Product and Design
+
+| Name | Title | Team | Email |
+|------|-------|------|-------|
+| Bengisu Shahin | Product Manager | Product Management | bengisu.shahin@skolyn.se |
+| Murad Aliyev | Design Lead | Design | murad.aliyev@skolyn.se |
+| Aysun Abdullayeva | UI/UX Designer | Design | aysun.abdullayeva@skolyn.se |
+| Saadat Khalili | UI/UX Designer | Design | saadat.khalili@skolyn.se |
+
+---
+
 ## System Architecture
 
 ```mermaid
@@ -183,6 +268,7 @@ For detailed architecture documentation, see:
 - [Pipeline Architecture](docs/architecture/pipeline-architecture.md)
 - [XAI Architecture](docs/architecture/xai-architecture.md)
 - [MedGemma Integration](docs/architecture/medgemma-integration.md)
+- [AI and Rhenium OS Team](docs/team/AI_AND_RHENIUM_OS_TEAM.md)
 
 ---
 
@@ -331,5 +417,14 @@ Rhenium OS is developed by **Skolyn LLC** in collaboration with academic and cli
 
 ---
 
-**
-Copyright (c) 2025 Skolyn LLC. All rights reserved.
+**Copyright (c) 2025 Skolyn LLC. All rights reserved.**
+
+---
+
+## Documentation Update Notes
+
+- Last updated: December 2025.
+- Added Disease Reasoning Layer to unified architecture table.
+- Aligned with disease reasoning capabilities (presence, identity, subtype, staging, trajectory).
+- Removed marketing tagline per style guidelines.
+- Revised markdown structure for consistency.

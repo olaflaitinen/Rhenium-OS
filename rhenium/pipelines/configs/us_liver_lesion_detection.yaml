@@ -85,12 +85,33 @@ xai:
       Ultrasound findings are operator-dependent. Clinical correlation 
       and additional imaging may be warranted.
 
+# Disease Reasoning settings
+disease_reasoning:
+  enabled: true
+  assessor: liver
+  generate_presence_assessment: true
+  generate_hypotheses: true
+  generate_differential: true
+  max_differential_entries: 5
+  detect_safety_flags: true
+  include_staging: true
+  include_trajectory: true
+  diseases:
+    - hepatic_cyst
+    - hemangioma
+    - focal_nodular_hyperplasia
+    - hepatocellular_carcinoma
+    - liver_metastasis
+    - fatty_liver_disease
+    - cirrhosis
+
 # MedGemma settings
 medgemma:
   enabled: true
   template: us_liver_abdomen
   generate_report: true
   explain_findings: true
+  explain_disease_hypotheses: true
   validators:
     - narrative_consistency
   uncertainty_emphasis: high  # Emphasize US limitations
@@ -99,4 +120,5 @@ medgemma:
 output:
   format: json
   include_dossiers: true
+  include_disease_output: true
   include_clips: false  # Cine clips if available

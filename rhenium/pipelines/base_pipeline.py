@@ -13,10 +13,11 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 from uuid import uuid4
 
 from rhenium.core.logging import get_pipeline_logger
+from rhenium.core.disease_types import DiseaseReasoningOutput
 from rhenium.data.dicom_io import DICOMStudy, DICOMSeries, ImageVolume
 from rhenium.xai.explanation_schema import Finding
 from rhenium.xai.evidence_dossier import EvidenceDossier
@@ -33,6 +34,7 @@ class PipelineResult:
     status: str = "success"  # success, failed, partial
     findings: list[Finding] = field(default_factory=list)
     dossiers: list[EvidenceDossier] = field(default_factory=list)
+    disease_output: Optional[DiseaseReasoningOutput] = None
     report_draft: Any = None
     execution_time_seconds: float = 0.0
     started_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
@@ -49,11 +51,22 @@ class PipelineResult:
             "status": self.status,
             "num_findings": len(self.findings),
             "findings": [f.to_dict() for f in self.findings],
+            "disease_output": self.disease_output.to_dict() if self.disease_output else None,
             "execution_time_seconds": self.execution_time_seconds,
             "started_at": self.started_at.isoformat(),
             "completed_at": self.completed_at.isoformat() if self.completed_at else None,
             "errors": self.errors,
         }
+
+    @property
+    def has_disease(self) -> bool:
+        """Check if disease was detected."""
+        return self.disease_output is not None and self.disease_output.has_disease
+
+    @property
+    def has_critical_findings(self) -> bool:
+        """Check for critical findings requiring escalation."""
+        return self.disease_output is not None and self.disease_output.has_critical_flags
 
 
 class BasePipeline(ABC):
@@ -64,9 +77,10 @@ class BasePipeline(ABC):
     1. Load input data
     2. Run reconstruction (if applicable)
     3. Run perception models
-    4. Generate XAI artifacts
-    5. Generate MedGemma explanations
-    6. Assemble results
+    4. Run disease reasoning
+    5. Generate XAI artifacts
+    6. Generate MedGemma explanations
+    7. Assemble results
     """
 
     name: str = "base_pipeline"
@@ -90,6 +104,10 @@ class BasePipeline(ABC):
     def run_analysis(self) -> None:
         """Run perception models."""
         pass
+
+    def run_disease_reasoning(self) -> Optional[DiseaseReasoningOutput]:
+        """Run disease reasoning (optional, override in subclasses)."""
+        return None
 
     @abstractmethod
     def run_xai(self) -> None:
@@ -122,6 +140,7 @@ class BasePipeline(ABC):
             self.load_input(source)
             self.run_reconstruction()
             self.run_analysis()
+            self._disease_output = self.run_disease_reasoning()
             self.run_xai()
             self.run_medgemma_explanation()
             result = self.assemble_results()

@@ -82,12 +82,37 @@ xai:
   narrative:
     enabled: true
 
+# Disease Reasoning settings
+disease_reasoning:
+  enabled: true
+  assessor: brain
+  generate_presence_assessment: true
+  generate_hypotheses: true
+  generate_differential: true
+  max_differential_entries: 5
+  detect_safety_flags: true
+  safety_flag_escalation: true
+  include_staging: false
+  include_trajectory: true
+  diseases:
+    - intracranial_hemorrhage
+    - epidural_hematoma
+    - subdural_hematoma
+    - subarachnoid_hemorrhage
+    - intraparenchymal_hemorrhage
+    - intraventricular_hemorrhage
+  critical_patterns:
+    - midline_shift_gt_5mm
+    - herniation_signs
+    - large_volume_hemorrhage
+
 # MedGemma settings
 medgemma:
   enabled: true
   template: ct_head_trauma
   generate_report: true
   explain_findings: true
+  explain_disease_hypotheses: true
   validators:
     - narrative_consistency
     - high_risk
@@ -97,6 +122,7 @@ medgemma:
 output:
   format: json
   include_dossiers: true
+  include_disease_output: true
   priority_flag: urgent
 
 # Performance mode

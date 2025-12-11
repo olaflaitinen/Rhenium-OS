@@ -1,6 +1,5 @@
 # Pipeline Architecture
 
-**
 ---
 
 ## Overview
@@ -44,8 +43,14 @@ flowchart TD
         N & O --> P[Evidence Dossier]
     end
     
+    subgraph DiseaseReasoning
+        P --> DR[Disease Assessor]
+        DR --> DH[Disease Hypotheses]
+        DH --> SF[Safety Flags]
+    end
+    
     subgraph Reasoning
-        P --> Q[MedGemma Adapter]
+        SF --> Q[MedGemma Adapter]
         Q --> R[Validators]
         R --> S[Narrative Generation]
     end
@@ -53,7 +58,8 @@ flowchart TD
     subgraph Output
         S --> T[Report Draft]
         P --> U[Evidence Export]
-        T & U --> V[Pipeline Result]
+        DH --> W[Disease Output]
+        T & U & W --> V[Pipeline Result]
     end
 ```
 
@@ -300,4 +306,12 @@ flowchart TD
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
-****
+---
+
+## Documentation Update Notes
+
+- Last updated: December 2025.
+- Added Disease Reasoning step to pipeline flow diagram.
+- Pipeline now outputs DiseaseReasoningOutput in PipelineResult.
+- Revised markdown structure for consistency.
+- Fixed formatting issues.

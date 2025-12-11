@@ -54,3 +54,5 @@ cache/
 results/
 .env
 .env.local
+outputs/
+uploads/

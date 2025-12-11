@@ -1,6 +1,5 @@
 # Generative Models and Physics-Informed Neural Networks Architecture
 
-**
 ---
 
 ## Overview
@@ -338,4 +337,10 @@ sequenceDiagram
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
-****
+---
+
+## Documentation Update Notes
+
+- Last updated: December 2025.
+- Aligned with Disease Reasoning Layer.
+- Revised markdown structure for consistency.

@@ -1,6 +1,5 @@
 # Core Architecture: Rhenium OS
 
-**
 ---
 
 ## Package Structure
@@ -35,6 +34,13 @@ rhenium/
 │   ├── super_resolution.py  # Image upscaling
 │   ├── denoising.py         # Noise reduction
 │   └── anomaly_detection.py # Anomaly detection
+├── disease/                 # Disease Reasoning Layer
+│   ├── base.py              # Base disease assessors
+│   ├── presence_assessment.py
+│   ├── differential.py      # Differential diagnosis
+│   ├── safety_flags.py      # Safety flag detection
+│   ├── trajectory.py        # Trajectory assessment
+│   └── lung/, liver/, brain/ # Organ-specific assessors
 ├── xai/                     # Rhenium XAI Engine
 │   ├── explanation_schema.py # Core data structures
 │   ├── evidence_dossier.py  # Dossier container
@@ -274,4 +280,11 @@ class BaseSegmentationModel(ABC):
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
-****
+---
+
+## Documentation Update Notes
+
+- Last updated: December 2025.
+- Added Disease Reasoning Layer (disease/) to package structure.
+- Revised markdown structure for consistency.
+- Fixed formatting issues.

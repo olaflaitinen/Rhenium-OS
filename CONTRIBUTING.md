@@ -1,6 +1,5 @@
 # Contributing to Rhenium OS
 
-**
 ---
 
 ## Introduction
@@ -129,4 +128,11 @@ By contributing, you agree that your contributions will be licensed under the Eu
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
-****
+---
+
+## Documentation Update Notes
+
+- Last updated: December 2025.
+- Aligned with Rhenium OS disease reasoning layer.
+- Revised markdown structure for consistency.
+- Fixed grammar and style issues.

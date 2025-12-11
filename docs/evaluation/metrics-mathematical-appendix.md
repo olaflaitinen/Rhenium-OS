@@ -1,6 +1,5 @@
 # Metrics Mathematical Appendix
 
-**
 ---
 
 ## Overview
@@ -232,4 +231,10 @@ Target: Ratio close to 1.0
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
-****
+---
+
+## Documentation Update Notes
+
+- Last updated: December 2025.
+- Aligned with Rhenium OS disease reasoning layer.
+- Revised markdown structure for consistency.

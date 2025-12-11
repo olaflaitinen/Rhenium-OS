@@ -1,6 +1,5 @@
 # Feature Taxonomy: Skolyn Rhenium OS
 
-**
 ---
 
 ## Overview
@@ -371,4 +370,10 @@ This document provides a hierarchical taxonomy of features implemented or planne
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
-****
+---
+
+## Documentation Update Notes
+
+- Last updated: December 2025.
+- Aligned with Rhenium OS disease reasoning layer.
+- Revised markdown structure for consistency.

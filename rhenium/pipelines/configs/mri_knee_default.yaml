@@ -49,15 +49,35 @@ xai:
   narrative:
     enabled: true
 
+# Disease Reasoning settings
+disease_reasoning:
+  enabled: true
+  assessor: musculoskeletal
+  generate_presence_assessment: true
+  generate_hypotheses: true
+  generate_differential: true
+  max_differential_entries: 5
+  detect_safety_flags: true
+  include_staging: false  # Not applicable for most knee pathologies
+  include_trajectory: true
+  diseases:
+    - meniscal_tear
+    - cartilage_lesion
+    - ligament_injury
+    - bone_contusion
+    - effusion
+
 # MedGemma settings
 medgemma:
   enabled: true
   template: mri_knee
   generate_report: true
   explain_findings: true
+  explain_disease_hypotheses: true
 
 # Output settings
 output:
   format: json
   include_dossiers: true
+  include_disease_output: true
   include_images: false

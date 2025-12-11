@@ -1,6 +1,5 @@
 # Architecture Overview: Skolyn Rhenium OS
 
-**
 ---
 
 ## Introduction
@@ -44,6 +43,14 @@ graph TD
         Gen[Generative Models]
     end
     
+    subgraph DiseaseReasoning["Disease Reasoning Layer"]
+        Presence[Presence Assessment]
+        Hypotheses[Disease Hypotheses]
+        Staging[Stage/Severity]
+        Differential[Differential Diagnosis]
+        Safety[Safety Flags]
+    end
+    
     subgraph Reconstruction["Reconstruction Layer"]
         MRI[MRI k-space]
         CT[CT Sinogram]
@@ -76,7 +83,8 @@ graph TD
     UI --> Orchestration
     Orchestration --> Reasoning
     Reasoning --> XAI
-    XAI --> Perception
+    XAI --> DiseaseReasoning
+    DiseaseReasoning --> Perception
     Perception --> Reconstruction
     Reconstruction --> Data
     Data --> Core
@@ -133,6 +141,18 @@ Creates comprehensive evidence for all findings:
 - **Quantitative**: Measurements, radiomics, uncertainty
 - **Narrative**: Textual descriptions and reasoning
 
+### Disease Reasoning Layer
+
+Provides structured disease-level clinical reasoning:
+
+- **Presence Assessment**: Determination of disease presence/absence with uncertainty scoring
+- **Disease Hypotheses**: Ranked disease candidates with probability estimates
+- **Subtype Classification**: Imaging-based phenotype surrogates for disease variants
+- **Stage/Severity Assessment**: Image-derived staging surrogates (e.g., TNM-like, BCLC-like)
+- **Differential Diagnosis**: Ranked alternative diagnoses with supporting/contradicting features
+- **Trajectory Assessment**: Longitudinal comparison for disease course tracking
+- **Safety Flags**: Detection of urgent patterns requiring clinical escalation
+
 ### Reasoning Layer
 
 Integrates AI reasoning for clinical context:
@@ -178,20 +198,27 @@ Ensures quality, fairness, and compliance:
    - Generate segmentations, detections, classifications
    - Compute quantitative measurements
 
-4. EXPLAIN
+4. DISEASE REASONING
+   - Assess disease presence/absence
+   - Generate disease hypotheses and rankings
+   - Determine subtypes and staging surrogates
+   - Create differential diagnosis list
+   - Detect clinical safety flags
+
+5. EXPLAIN
    - Generate visual evidence (saliency, overlays)
    - Compile quantitative evidence
    - Create Evidence Dossiers
 
-5. REASON (MedGemma)
+6. REASON (MedGemma)
    - Generate narrative explanations
    - Draft structured report sections
    - Validate consistency
 
-6. OUTPUT
+7. OUTPUT
    - Serialize results (JSON, DICOM-SR)
    - Log audit entry
-   - Return PipelineResult
+   - Return PipelineResult with DiseaseReasoningOutput
 ```
 
 ---
@@ -251,4 +278,12 @@ Ensures quality, fairness, and compliance:
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
-****
+---
+
+## Documentation Update Notes
+
+- Last updated: December 2025.
+- Added Disease Reasoning Layer to architecture diagram and layer descriptions.
+- Updated data flow to include disease reasoning step.
+- Revised markdown structure for consistency.
+- Fixed grammar and style issues.

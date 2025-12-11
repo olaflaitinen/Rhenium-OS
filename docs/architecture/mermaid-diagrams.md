@@ -1,6 +1,5 @@
 # Mermaid Diagrams Reference
 
-**
 ---
 
 ## Overview
@@ -435,4 +434,10 @@ flowchart TD
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
-****
+---
+
+## Documentation Update Notes
+
+- Last updated: December 2025.
+- Aligned with Disease Reasoning Layer.
+- Revised markdown structure for consistency.

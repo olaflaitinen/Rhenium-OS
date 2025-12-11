@@ -86,6 +86,17 @@ xai:
   narrative:
     enabled: true
 
+
+# Disease Reasoning settings
+disease_reasoning:
+  enabled: true
+  generate_presence_assessment: true
+  generate_hypotheses: true
+  generate_differential: true
+  max_differential_entries: 5
+  detect_safety_flags: true
+  include_staging: false
+  include_trajectory: true
 # MedGemma settings
 medgemma:
   enabled: true
@@ -101,5 +112,6 @@ medgemma:
 output:
   format: json
   include_dossiers: true
+  include_disease_output: true
   include_segmentations: true
   export_nifti: false
