@@ -368,6 +368,7 @@ These are aspirational targets; deployed models require empirical validation on 
 
 | Document | Description |
 |----------|-------------|
+| [**Full Documentation Index**](docs/README.md) | **Start Here: Master index of all documentation** |
 | [Vision](docs/vision/vision.md) | Clinical context, mission, roadmap |
 | [Feature Taxonomy](docs/vision/feature-taxonomy.md) | Hierarchical feature breakdown |
 | [Architecture Overview](docs/architecture/architecture-overview.md) | System layers and interactions |

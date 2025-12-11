@@ -269,12 +269,13 @@ Ensures quality, fairness, and compliance:
 
 ## Related Documentation
 
-- [Core Architecture](core-architecture.md): Package structure and patterns
-- [Pipeline Architecture](pipeline-architecture.md): Orchestration details
-- [XAI Architecture](xai-architecture.md): Explainability framework
-- [MedGemma Integration](medgemma-integration.md): Reasoning layer design
+- [Architecture Overview](architecture-overview.md)
+- [Core Architecture](core-architecture.md)
+- [Pipeline Architecture](pipeline-architecture.md)
+- [XAI Architecture](xai-architecture.md)
+- [MedGemma Integration](medgemma-integration.md)
+- [AI and Rhenium OS Team](../team/AI_AND_RHENIUM_OS_TEAM.md)
 
 ---
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
-
