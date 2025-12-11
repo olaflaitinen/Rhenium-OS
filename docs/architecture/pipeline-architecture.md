@@ -306,12 +306,3 @@ flowchart TD
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
----
-
-## Documentation Update Notes
-
-- Last updated: December 2025.
-- Added Disease Reasoning step to pipeline flow diagram.
-- Pipeline now outputs DiseaseReasoningOutput in PipelineResult.
-- Revised markdown structure for consistency.
-- Fixed formatting issues.

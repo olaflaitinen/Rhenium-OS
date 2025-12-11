@@ -179,10 +179,3 @@ Explainability in Rhenium OS is not an afterthought but a core architectural pri
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
----
-
-## Documentation Update Notes
-
-- Last updated: December 2025.
-- Aligned with Rhenium OS disease reasoning layer.
-- Revised markdown structure for consistency.

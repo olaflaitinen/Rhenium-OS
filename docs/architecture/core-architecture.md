@@ -280,11 +280,3 @@ class BaseSegmentationModel(ABC):
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
----
-
-## Documentation Update Notes
-
-- Last updated: December 2025.
-- Added Disease Reasoning Layer (disease/) to package structure.
-- Revised markdown structure for consistency.
-- Fixed formatting issues.

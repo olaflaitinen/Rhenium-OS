@@ -370,11 +370,3 @@ disease = engine.get_disease_assessment("study_001")
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
----
-
-## Documentation Update Notes
-
-- Last updated: December 2025.
-- Added 8 extended clinical procedures.
-- Integrated mathematical formulas.
-- Added Mermaid architecture diagram.

@@ -415,12 +415,3 @@ Rhenium OS is developed by **Skolyn LLC** in collaboration with academic and cli
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
----
-
-## Documentation Update Notes
-
-- Last updated: December 2025.
-- Added Disease Reasoning Layer to unified architecture table.
-- Aligned with disease reasoning capabilities (presence, identity, subtype, staging, trajectory).
-- Removed marketing tagline per style guidelines.
-- Revised markdown structure for consistency.

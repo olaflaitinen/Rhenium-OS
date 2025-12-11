@@ -231,10 +231,3 @@ flowchart TD
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
----
-
-## Documentation Update Notes
-
-- Last updated: December 2025.
-- Initial Dashboard Engine API documentation.
-- Includes Mermaid sequence, class, and flowchart diagrams.

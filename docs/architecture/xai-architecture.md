@@ -255,12 +255,3 @@ When performance disparities exist across subgroups, narrative evidence includes
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
----
-
-## Documentation Update Notes
-
-- Last updated: December 2025.
-- Added DiseaseReasoningOutput to Evidence Dossier structure.
-- Aligned with Rhenium OS disease reasoning layer.
-- Revised markdown structure for consistency.
-- Fixed formatting issues.

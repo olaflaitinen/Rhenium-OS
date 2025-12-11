@@ -278,12 +278,3 @@ Ensures quality, fairness, and compliance:
 
 **Copyright (c) 2025 Skolyn LLC. All rights reserved.**
 
----
-
-## Documentation Update Notes
-
-- Last updated: December 2025.
-- Added Disease Reasoning Layer to architecture diagram and layer descriptions.
-- Updated data flow to include disease reasoning step.
-- Revised markdown structure for consistency.
-- Fixed grammar and style issues.
