@@ -22,31 +22,34 @@ The MedGemma module provides clinical reasoning and explanation capabilities wit
 
 ## Adapter Architecture
 
-```
-+------------------------------------------------------------------+
-|                     MedGemma Adapter Layer                        |
-|  +-------------------------+  +-------------------------------+   |
-|  |   Abstract Client       |  |     Tool-Use Framework        |   |
-|  |   - generate_report()   |  |     - GuidelineChecker        |   |
-|  |   - explain_finding()   |  |     - RuleBasedValidator      |   |
-|  |   - validate_consistency|  |     - MeasurementVerifier     |   |
-|  |   - answer_question()   |  |     - KnowledgeGraphQuery     |   |
-|  +-------------------------+  +-------------------------------+   |
-|                 |                            |                    |
-|  +----------------------------------------------------------+    |
-|  |                 Prompt Template Engine                    |    |
-|  |   - Organ-specific templates                             |    |
-|  |   - Modality-specific templates                          |    |
-|  |   - Uncertainty-aware templates                          |    |
-|  +----------------------------------------------------------+    |
-+------------------------------------------------------------------+
-                               |
-            +------------------+------------------+
-            |                  |                  |
-     +------v------+    +------v------+    +------v------+
-     | StubClient  |    | LocalClient |    | RemoteClient|
-     | (Testing)   |    | (On-Prem)   |    | (Cloud API) |
-     +-------------+    +-------------+    +-------------+
+```mermaid
+graph TB
+    subgraph AdapterLayer["MedGemma Adapter Layer"]
+        subgraph AbstractClient["Abstract Client"]
+            gr[generate_report]
+            ef[explain_finding]
+            vc[validate_consistency]
+            aq[answer_question]
+        end
+        
+        subgraph ToolFramework["Tool-Use Framework"]
+            gc[GuidelineChecker]
+            rv[RuleBasedValidator]
+            mv[MeasurementVerifier]
+            kg[KnowledgeGraphQuery]
+        end
+        
+        subgraph PromptEngine["Prompt Template Engine"]
+            ot[Organ-specific templates]
+            mt[Modality-specific templates]
+            ut[Uncertainty-aware templates]
+            dt[Disease explanation templates]
+        end
+    end
+    
+    AdapterLayer --> StubClient[StubClient - Testing]
+    AdapterLayer --> LocalClient[LocalClient - On-Prem]
+    AdapterLayer --> RemoteClient[RemoteClient - Cloud API]
 ```
 
 ---
