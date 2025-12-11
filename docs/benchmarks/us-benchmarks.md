@@ -4,6 +4,22 @@
 
 ---
 
+## Key Formulas
+
+**Dice Coefficient**:
+$$\text{Dice}(A, B) = \frac{2|A \cap B|}{|A| + |B|}$$
+
+**Mean Absolute Error**:
+$$\text{MAE} = \frac{1}{N} \sum_{i=1}^N |y_i - \hat{y}_i|$$
+
+**Contrast-to-Noise Ratio (CNR)**:
+$$\text{CNR} = \frac{|\mu_{\text{signal}} - \mu_{\text{background}}|}{\sigma_{\text{background}}}$$
+
+**Pearson Correlation**:
+$$r = \frac{\sum_i (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_i (x_i - \bar{x})^2} \sqrt{\sum_i (y_i - \bar{y})^2}}$$
+
+---
+
 ## Cardiac Ultrasound (Echocardiography)
 
 | Task | Metric | Target | Baseline |
@@ -14,6 +30,7 @@
 | GLS Estimation | Correlation | > 0.90 | 0.85 |
 
 ---
+
 
 ## Obstetric Ultrasound
 

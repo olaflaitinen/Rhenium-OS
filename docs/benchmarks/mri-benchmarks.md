@@ -1,7 +1,22 @@
 # MRI Benchmarks
 
-**
-****
+**Last Updated: December 2025**
+
+---
+
+## Key Formulas
+
+**MRI Signal Equation (Spin Echo)**:
+$$S = \rho \cdot e^{-\text{TE}/T_2} \cdot (1 - e^{-\text{TR}/T_1})$$
+
+**Dice Coefficient**:
+$$\text{Dice}(A, B) = \frac{2|A \cap B|}{|A| + |B|}$$
+
+**SSIM (Structural Similarity)**:
+$$\text{SSIM}(x, y) = \frac{(2\mu_x \mu_y + C_1)(2\sigma_{xy} + C_2)}{(\mu_x^2 + \mu_y^2 + C_1)(\sigma_x^2 + \sigma_y^2 + C_2)}$$
+
+**SNR (Signal-to-Noise Ratio)**:
+$$\text{SNR} = \frac{\mu_{\text{signal}}}{\sigma_{\text{noise}}}$$
 
 ---
 
@@ -10,6 +25,7 @@
 This document defines benchmark targets for MRI perception tasks across organ systems within Rhenium OS.
 
 ---
+
 
 ## Reconstruction Quality Benchmarks
 

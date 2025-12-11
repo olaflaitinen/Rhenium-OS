@@ -1,7 +1,22 @@
 # CT Benchmarks
 
-**
-****
+**Last Updated: December 2025**
+
+---
+
+## Key Formulas
+
+**Hounsfield Units**:
+$$\text{HU} = 1000 \times \frac{\mu - \mu_{\text{water}}}{\mu_{\text{water}}}$$
+
+**AUC (Area Under Curve)**:
+$$\text{AUC} = \int_0^1 \text{TPR}(t) \, d\text{FPR}(t)$$
+
+**Sensitivity**:
+$$\text{Sensitivity} = \frac{\text{TP}}{\text{TP} + \text{FN}}$$
+
+**PSNR (Peak Signal-to-Noise Ratio)**:
+$$\text{PSNR} = 10 \log_{10} \left( \frac{\text{MAX}^2}{\text{MSE}} \right) \text{ dB}$$
 
 ---
 
@@ -10,6 +25,7 @@
 This document defines benchmark targets for CT perception tasks across organ systems within Rhenium OS.
 
 ---
+
 
 ## Brain CT Benchmarks
 

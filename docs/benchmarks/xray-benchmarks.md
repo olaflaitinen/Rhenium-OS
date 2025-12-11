@@ -4,6 +4,22 @@
 
 ---
 
+## Key Formulas
+
+**AUC (Area Under Curve)**:
+$$\text{AUC} = \int_0^1 \text{TPR}(t) \, d\text{FPR}(t)$$
+
+**Sensitivity (True Positive Rate)**:
+$$\text{Sensitivity} = \frac{\text{TP}}{\text{TP} + \text{FN}}$$
+
+**Dice Coefficient**:
+$$\text{Dice}(A, B) = \frac{2|A \cap B|}{|A| + |B|}$$
+
+**Mean Absolute Error**:
+$$\text{MAE} = \frac{1}{N} \sum_{i=1}^N |y_i - \hat{y}_i|$$
+
+---
+
 ## Chest X-ray (CXR)
 
 | Task | Metric | Target | Baseline |
@@ -14,6 +30,7 @@
 | Lung Segmentation | Dice | > 0.97 | 0.95 |
 
 ---
+
 
 ## Musculoskeletal (MSK)
 
