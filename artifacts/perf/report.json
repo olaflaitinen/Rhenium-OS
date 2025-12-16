@@ -1,0 +1,1951 @@
+{
+  "schema_version": "1.0.0",
+  "timestamp": "2025-12-15T15:52:19.568807",
+  "environment": {
+    "python": "3.14.1",
+    "os": "Windows",
+    "os_version": "11",
+    "cpu": "AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD",
+    "cpu_count": 8,
+    "ram_gb": 5.9,
+    "torch": "2.9.1+cpu",
+    "cuda": null,
+    "cudnn": null,
+    "gpu": null,
+    "gpu_count": 0,
+    "vram_gb": null
+  },
+  "model": {
+    "version": "0.1.0",
+    "core_model_id": "RheniumCoreModel",
+    "git_sha": "75f0cbfc7feb",
+    "git_branch": "main",
+    "git_dirty": true,
+    "config_hash": "9716c68902d06de9"
+  },
+  "benchmarks": [
+    {
+      "id": "e2e_full_pipeline_MRI_8",
+      "category": "e2e_core_model",
+      "task": "full_pipeline",
+      "modality": "MRI",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.765,
+        "max": 3.741,
+        "mean": 3.169,
+        "std": 0.39,
+        "p50": 3.195,
+        "p95": 3.651,
+        "p99": 3.723
+      },
+      "throughput": {
+        "items_per_sec": 315.55,
+        "voxels_per_sec": 646236.18
+      },
+      "memory": {
+        "rss_mb_before": 274.28,
+        "rss_mb_after": 274.95,
+        "rss_mb_peak": 274.95,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "e2e_full_pipeline_CT_8",
+      "category": "e2e_core_model",
+      "task": "full_pipeline",
+      "modality": "CT",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.501,
+        "max": 2.647,
+        "mean": 2.591,
+        "std": 0.061,
+        "p50": 2.624,
+        "p95": 2.643,
+        "p99": 2.646
+      },
+      "throughput": {
+        "items_per_sec": 385.97,
+        "voxels_per_sec": 790471.12
+      },
+      "memory": {
+        "rss_mb_before": 275.34,
+        "rss_mb_after": 275.34,
+        "rss_mb_peak": 275.34,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "e2e_full_pipeline_US_8",
+      "category": "e2e_core_model",
+      "task": "full_pipeline",
+      "modality": "US",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 3.344,
+        "max": 5.059,
+        "mean": 4.063,
+        "std": 0.666,
+        "p50": 4.107,
+        "p95": 4.893,
+        "p99": 5.025
+      },
+      "throughput": {
+        "items_per_sec": 246.13,
+        "voxels_per_sec": 504083.37
+      },
+      "memory": {
+        "rss_mb_before": 275.38,
+        "rss_mb_after": 275.38,
+        "rss_mb_peak": 275.38,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "e2e_full_pipeline_XR_8",
+      "category": "e2e_core_model",
+      "task": "full_pipeline",
+      "modality": "XR",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.88,
+        "max": 3.455,
+        "mean": 3.188,
+        "std": 0.267,
+        "p50": 3.324,
+        "p95": 3.436,
+        "p99": 3.451
+      },
+      "throughput": {
+        "items_per_sec": 313.64,
+        "voxels_per_sec": 642328.44
+      },
+      "memory": {
+        "rss_mb_before": 275.41,
+        "rss_mb_after": 275.41,
+        "rss_mb_peak": 275.41,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "e2e_full_pipeline_MRI_16",
+      "category": "e2e_core_model",
+      "task": "full_pipeline",
+      "modality": "MRI",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.827,
+        "max": 3.207,
+        "mean": 3.003,
+        "std": 0.175,
+        "p50": 2.937,
+        "p95": 3.2,
+        "p99": 3.205
+      },
+      "throughput": {
+        "items_per_sec": 333.0,
+        "voxels_per_sec": 5455913.79
+      },
+      "memory": {
+        "rss_mb_before": 276.22,
+        "rss_mb_after": 276.35,
+        "rss_mb_peak": 276.35,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "e2e_full_pipeline_CT_16",
+      "category": "e2e_core_model",
+      "task": "full_pipeline",
+      "modality": "CT",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.682,
+        "max": 3.261,
+        "mean": 2.902,
+        "std": 0.262,
+        "p50": 2.762,
+        "p95": 3.229,
+        "p99": 3.255
+      },
+      "throughput": {
+        "items_per_sec": 344.6,
+        "voxels_per_sec": 5645995.01
+      },
+      "memory": {
+        "rss_mb_before": 276.36,
+        "rss_mb_after": 276.36,
+        "rss_mb_peak": 276.36,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "e2e_full_pipeline_US_16",
+      "category": "e2e_core_model",
+      "task": "full_pipeline",
+      "modality": "US",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.817,
+        "max": 3.347,
+        "mean": 2.959,
+        "std": 0.223,
+        "p50": 2.87,
+        "p95": 3.266,
+        "p99": 3.331
+      },
+      "throughput": {
+        "items_per_sec": 337.96,
+        "voxels_per_sec": 5537080.6
+      },
+      "memory": {
+        "rss_mb_before": 276.36,
+        "rss_mb_after": 276.36,
+        "rss_mb_peak": 276.36,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "e2e_full_pipeline_XR_16",
+      "category": "e2e_core_model",
+      "task": "full_pipeline",
+      "modality": "XR",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 3.593,
+        "max": 4.419,
+        "mean": 3.995,
+        "std": 0.292,
+        "p50": 3.988,
+        "p95": 4.335,
+        "p99": 4.402
+      },
+      "throughput": {
+        "items_per_sec": 250.34,
+        "voxels_per_sec": 4101639.75
+      },
+      "memory": {
+        "rss_mb_before": 276.36,
+        "rss_mb_after": 276.37,
+        "rss_mb_peak": 276.37,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "io_volume_creation_8",
+      "category": "io_parsing",
+      "task": "volume_creation",
+      "modality": null,
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.027,
+        "max": 0.032,
+        "mean": 0.03,
+        "std": 0.003,
+        "p50": 0.03,
+        "p95": 0.032,
+        "p99": 0.032
+      },
+      "throughput": {
+        "items_per_sec": 33624.75,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 276.39,
+        "rss_mb_after": 276.39,
+        "rss_mb_peak": 276.39,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "io_volume_creation_16",
+      "category": "io_parsing",
+      "task": "volume_creation",
+      "modality": null,
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.03,
+        "max": 0.034,
+        "mean": 0.032,
+        "std": 0.001,
+        "p50": 0.032,
+        "p95": 0.034,
+        "p99": 0.034
+      },
+      "throughput": {
+        "items_per_sec": 31308.7,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 276.39,
+        "rss_mb_after": 276.39,
+        "rss_mb_peak": 276.39,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "io_volume_creation_32",
+      "category": "io_parsing",
+      "task": "volume_creation",
+      "modality": null,
+      "input_shape": [
+        32,
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.046,
+        "max": 0.138,
+        "mean": 0.069,
+        "std": 0.039,
+        "p50": 0.053,
+        "p95": 0.122,
+        "p99": 0.135
+      },
+      "throughput": {
+        "items_per_sec": 14577.26,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 276.39,
+        "rss_mb_after": 276.57,
+        "rss_mb_peak": 276.57,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "io_synthetic_generation",
+      "category": "io_parsing",
+      "task": "synthetic_volume",
+      "modality": null,
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.857,
+        "max": 0.985,
+        "mean": 0.896,
+        "std": 0.054,
+        "p50": 0.867,
+        "p95": 0.97,
+        "p99": 0.982
+      },
+      "throughput": {
+        "items_per_sec": 1116.05,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 276.57,
+        "rss_mb_after": 276.88,
+        "rss_mb_peak": 276.88,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "preprocess_normalize_8",
+      "category": "preprocessing",
+      "task": "normalize_minmax",
+      "modality": null,
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.018,
+        "max": 0.021,
+        "mean": 0.019,
+        "std": 0.001,
+        "p50": 0.019,
+        "p95": 0.021,
+        "p99": 0.021
+      },
+      "throughput": {
+        "items_per_sec": 52029.14,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 276.9,
+        "rss_mb_after": 276.9,
+        "rss_mb_peak": 276.9,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "preprocess_normalize_16",
+      "category": "preprocessing",
+      "task": "normalize_minmax",
+      "modality": null,
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.031,
+        "max": 0.044,
+        "mean": 0.038,
+        "std": 0.006,
+        "p50": 0.042,
+        "p95": 0.043,
+        "p99": 0.044
+      },
+      "throughput": {
+        "items_per_sec": 26096.03,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 276.9,
+        "rss_mb_after": 276.9,
+        "rss_mb_peak": 276.9,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "preprocess_normalize_32",
+      "category": "preprocessing",
+      "task": "normalize_minmax",
+      "modality": null,
+      "input_shape": [
+        32,
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.118,
+        "max": 0.163,
+        "mean": 0.133,
+        "std": 0.018,
+        "p50": 0.128,
+        "p95": 0.158,
+        "p99": 0.162
+      },
+      "throughput": {
+        "items_per_sec": 7509.76,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 276.91,
+        "rss_mb_after": 278.09,
+        "rss_mb_peak": 278.09,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "preprocess_resample",
+      "category": "preprocessing",
+      "task": "resample",
+      "modality": null,
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.498,
+        "max": 1.122,
+        "mean": 0.636,
+        "std": 0.272,
+        "p50": 0.516,
+        "p95": 1.006,
+        "p99": 1.099
+      },
+      "throughput": {
+        "items_per_sec": 1571.49,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 278.4,
+        "rss_mb_after": 278.45,
+        "rss_mb_peak": 278.45,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_seg_MRI_8",
+      "category": "perception_inference",
+      "task": "segmentation",
+      "modality": "MRI",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.807,
+        "max": 3.796,
+        "mean": 3.205,
+        "std": 0.454,
+        "p50": 2.956,
+        "p95": 3.755,
+        "p99": 3.788
+      },
+      "throughput": {
+        "items_per_sec": 312.0,
+        "voxels_per_sec": 638981.62
+      },
+      "memory": {
+        "rss_mb_before": 278.47,
+        "rss_mb_after": 278.48,
+        "rss_mb_peak": 278.48,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_seg_CT_8",
+      "category": "perception_inference",
+      "task": "segmentation",
+      "modality": "CT",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.572,
+        "max": 3.469,
+        "mean": 3.221,
+        "std": 0.372,
+        "p50": 3.324,
+        "p95": 3.466,
+        "p99": 3.469
+      },
+      "throughput": {
+        "items_per_sec": 310.46,
+        "voxels_per_sec": 635819.49
+      },
+      "memory": {
+        "rss_mb_before": 278.36,
+        "rss_mb_after": 278.36,
+        "rss_mb_peak": 278.36,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_seg_US_8",
+      "category": "perception_inference",
+      "task": "segmentation",
+      "modality": "US",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.78,
+        "max": 3.721,
+        "mean": 3.323,
+        "std": 0.474,
+        "p50": 3.624,
+        "p95": 3.708,
+        "p99": 3.719
+      },
+      "throughput": {
+        "items_per_sec": 300.96,
+        "voxels_per_sec": 616358.79
+      },
+      "memory": {
+        "rss_mb_before": 278.36,
+        "rss_mb_after": 278.36,
+        "rss_mb_peak": 278.36,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_seg_XR_8",
+      "category": "perception_inference",
+      "task": "segmentation",
+      "modality": "XR",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 3.805,
+        "max": 4.398,
+        "mean": 3.957,
+        "std": 0.248,
+        "p50": 3.865,
+        "p95": 4.295,
+        "p99": 4.378
+      },
+      "throughput": {
+        "items_per_sec": 252.71,
+        "voxels_per_sec": 517550.73
+      },
+      "memory": {
+        "rss_mb_before": 278.36,
+        "rss_mb_after": 278.37,
+        "rss_mb_peak": 278.37,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_seg_MRI_16",
+      "category": "perception_inference",
+      "task": "segmentation",
+      "modality": "MRI",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.547,
+        "max": 2.928,
+        "mean": 2.743,
+        "std": 0.161,
+        "p50": 2.729,
+        "p95": 2.918,
+        "p99": 2.926
+      },
+      "throughput": {
+        "items_per_sec": 364.56,
+        "voxels_per_sec": 5973022.24
+      },
+      "memory": {
+        "rss_mb_before": 278.43,
+        "rss_mb_after": 278.56,
+        "rss_mb_peak": 278.56,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_seg_CT_16",
+      "category": "perception_inference",
+      "task": "segmentation",
+      "modality": "CT",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.562,
+        "max": 2.901,
+        "mean": 2.648,
+        "std": 0.143,
+        "p50": 2.605,
+        "p95": 2.842,
+        "p99": 2.889
+      },
+      "throughput": {
+        "items_per_sec": 377.66,
+        "voxels_per_sec": 6187638.32
+      },
+      "memory": {
+        "rss_mb_before": 278.56,
+        "rss_mb_after": 278.56,
+        "rss_mb_peak": 278.56,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_seg_US_16",
+      "category": "perception_inference",
+      "task": "segmentation",
+      "modality": "US",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.681,
+        "max": 2.932,
+        "mean": 2.763,
+        "std": 0.103,
+        "p50": 2.747,
+        "p95": 2.9,
+        "p99": 2.926
+      },
+      "throughput": {
+        "items_per_sec": 361.88,
+        "voxels_per_sec": 5929099.78
+      },
+      "memory": {
+        "rss_mb_before": 278.56,
+        "rss_mb_after": 278.57,
+        "rss_mb_peak": 278.57,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_seg_XR_16",
+      "category": "perception_inference",
+      "task": "segmentation",
+      "modality": "XR",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.816,
+        "max": 3.814,
+        "mean": 3.311,
+        "std": 0.381,
+        "p50": 3.369,
+        "p95": 3.746,
+        "p99": 3.8
+      },
+      "throughput": {
+        "items_per_sec": 301.98,
+        "voxels_per_sec": 4947606.82
+      },
+      "memory": {
+        "rss_mb_before": 278.57,
+        "rss_mb_after": 278.57,
+        "rss_mb_peak": 278.57,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_classification",
+      "category": "perception_inference",
+      "task": "classification",
+      "modality": "MRI",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.752,
+        "max": 3.895,
+        "mean": 3.168,
+        "std": 0.456,
+        "p50": 3.088,
+        "p95": 3.771,
+        "p99": 3.871
+      },
+      "throughput": {
+        "items_per_sec": 315.67,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 278.57,
+        "rss_mb_after": 278.86,
+        "rss_mb_peak": 278.86,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "perception_detection",
+      "category": "perception_inference",
+      "task": "detection",
+      "modality": "CT",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.709,
+        "max": 3.743,
+        "mean": 3.157,
+        "std": 0.418,
+        "p50": 2.962,
+        "p95": 3.679,
+        "p99": 3.73
+      },
+      "throughput": {
+        "items_per_sec": 316.78,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 278.73,
+        "rss_mb_after": 278.77,
+        "rss_mb_peak": 278.77,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "recon_mri_8",
+      "category": "reconstruction_mri",
+      "task": "mri_reconstruction",
+      "modality": "MRI",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.365,
+        "max": 3.23,
+        "mean": 2.683,
+        "std": 0.347,
+        "p50": 2.688,
+        "p95": 3.13,
+        "p99": 3.21
+      },
+      "throughput": {
+        "items_per_sec": 372.7,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 278.77,
+        "rss_mb_after": 278.77,
+        "rss_mb_peak": 278.77,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "recon_mri_16",
+      "category": "reconstruction_mri",
+      "task": "mri_reconstruction",
+      "modality": "MRI",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.543,
+        "max": 3.557,
+        "mean": 2.875,
+        "std": 0.444,
+        "p50": 2.612,
+        "p95": 3.465,
+        "p99": 3.539
+      },
+      "throughput": {
+        "items_per_sec": 347.79,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 278.77,
+        "rss_mb_after": 278.77,
+        "rss_mb_peak": 278.77,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "recon_ct_8",
+      "category": "reconstruction_ct",
+      "task": "ct_reconstruction",
+      "modality": "CT",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.749,
+        "max": 3.537,
+        "mean": 3.115,
+        "std": 0.34,
+        "p50": 3.162,
+        "p95": 3.496,
+        "p99": 3.528
+      },
+      "throughput": {
+        "items_per_sec": 321.0,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 278.77,
+        "rss_mb_after": 278.77,
+        "rss_mb_peak": 278.77,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "recon_ct_16",
+      "category": "reconstruction_ct",
+      "task": "ct_reconstruction",
+      "modality": "CT",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.432,
+        "max": 3.425,
+        "mean": 2.785,
+        "std": 0.433,
+        "p50": 2.566,
+        "p95": 3.348,
+        "p99": 3.409
+      },
+      "throughput": {
+        "items_per_sec": 359.02,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 278.77,
+        "rss_mb_after": 278.77,
+        "rss_mb_peak": 278.77,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "pinn_step_tiny",
+      "category": "pinn_step",
+      "task": "pde_residual",
+      "modality": null,
+      "input_shape": [
+        100,
+        3
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.048,
+        "max": 0.055,
+        "mean": 0.052,
+        "std": 0.003,
+        "p50": 0.052,
+        "p95": 0.055,
+        "p99": 0.055
+      },
+      "throughput": {
+        "items_per_sec": 19179.13,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 278.65,
+        "rss_mb_after": 278.67,
+        "rss_mb_peak": 278.67,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "gan_sr_MRI_8",
+      "category": "gan_inference",
+      "task": "super_resolution",
+      "modality": "MRI",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 6.782,
+        "max": 9.806,
+        "mean": 8.575,
+        "std": 1.433,
+        "p50": 9.419,
+        "p95": 9.766,
+        "p99": 9.798
+      },
+      "throughput": {
+        "items_per_sec": 116.61,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 278.8,
+        "rss_mb_after": 283.73,
+        "rss_mb_peak": 283.73,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "gan_sr_CT_8",
+      "category": "gan_inference",
+      "task": "super_resolution",
+      "modality": "CT",
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 9.564,
+        "max": 11.499,
+        "mean": 10.367,
+        "std": 0.738,
+        "p50": 10.321,
+        "p95": 11.31,
+        "p99": 11.461
+      },
+      "throughput": {
+        "items_per_sec": 96.46,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 283.74,
+        "rss_mb_after": 283.74,
+        "rss_mb_peak": 283.74,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "gan_sr_MRI_16",
+      "category": "gan_inference",
+      "task": "super_resolution",
+      "modality": "MRI",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 11.941,
+        "max": 14.639,
+        "mean": 13.476,
+        "std": 0.995,
+        "p50": 13.545,
+        "p95": 14.499,
+        "p99": 14.611
+      },
+      "throughput": {
+        "items_per_sec": 74.21,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 284.49,
+        "rss_mb_after": 286.47,
+        "rss_mb_peak": 286.47,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "gan_sr_CT_16",
+      "category": "gan_inference",
+      "task": "super_resolution",
+      "modality": "CT",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 10.379,
+        "max": 13.471,
+        "mean": 12.305,
+        "std": 1.36,
+        "p50": 12.936,
+        "p95": 13.447,
+        "p99": 13.466
+      },
+      "throughput": {
+        "items_per_sec": 81.27,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 287.11,
+        "rss_mb_after": 287.11,
+        "rss_mb_peak": 287.11,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "gan_denoise",
+      "category": "gan_inference",
+      "task": "denoise",
+      "modality": "CT",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.858,
+        "max": 4.167,
+        "mean": 3.214,
+        "std": 0.549,
+        "p50": 2.953,
+        "p95": 3.973,
+        "p99": 4.129
+      },
+      "throughput": {
+        "items_per_sec": 311.12,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 287.12,
+        "rss_mb_after": 287.13,
+        "rss_mb_peak": 287.13,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "xai_dossier_MRI",
+      "category": "xai_dossier",
+      "task": "dossier_generation",
+      "modality": "MRI",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.48,
+        "max": 26.794,
+        "mean": 7.464,
+        "std": 10.806,
+        "p50": 2.707,
+        "p95": 21.988,
+        "p99": 25.833
+      },
+      "throughput": {
+        "items_per_sec": 133.97,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 285.2,
+        "rss_mb_after": 285.32,
+        "rss_mb_peak": 285.32,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "xai_dossier_CT",
+      "category": "xai_dossier",
+      "task": "dossier_generation",
+      "modality": "CT",
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 2.985,
+        "max": 3.535,
+        "mean": 3.288,
+        "std": 0.244,
+        "p50": 3.249,
+        "p95": 3.535,
+        "p99": 3.535
+      },
+      "throughput": {
+        "items_per_sec": 304.09,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 285.32,
+        "rss_mb_after": 285.32,
+        "rss_mb_peak": 285.32,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "serialization_json_8",
+      "category": "serialization",
+      "task": "json_export",
+      "modality": null,
+      "input_shape": [
+        8,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.028,
+        "max": 0.036,
+        "mean": 0.031,
+        "std": 0.003,
+        "p50": 0.031,
+        "p95": 0.035,
+        "p99": 0.036
+      },
+      "throughput": {
+        "items_per_sec": 32195.75,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 285.32,
+        "rss_mb_after": 285.32,
+        "rss_mb_peak": 285.32,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "serialization_json_16",
+      "category": "serialization",
+      "task": "json_export",
+      "modality": null,
+      "input_shape": [
+        16,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.031,
+        "max": 0.037,
+        "mean": 0.035,
+        "std": 0.003,
+        "p50": 0.034,
+        "p95": 0.037,
+        "p99": 0.037
+      },
+      "throughput": {
+        "items_per_sec": 28985.51,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 285.33,
+        "rss_mb_after": 285.33,
+        "rss_mb_peak": 285.33,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "fastapi_health",
+      "category": "fastapi_readiness",
+      "task": "health_check",
+      "modality": null,
+      "input_shape": null,
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.007,
+        "max": 0.01,
+        "mean": 0.008,
+        "std": 0.001,
+        "p50": 0.007,
+        "p95": 0.009,
+        "p99": 0.01
+      },
+      "throughput": {
+        "items_per_sec": 128205.13,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 285.21,
+        "rss_mb_after": 285.21,
+        "rss_mb_peak": 285.21,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "cli_import",
+      "category": "cli_overhead",
+      "task": "module_import",
+      "modality": null,
+      "input_shape": null,
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 1.94,
+        "max": 2.514,
+        "mean": 2.231,
+        "std": 0.255,
+        "p50": 2.302,
+        "p95": 2.493,
+        "p99": 2.509
+      },
+      "throughput": {
+        "items_per_sec": 448.31,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 285.21,
+        "rss_mb_after": 285.21,
+        "rss_mb_peak": 285.21,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "governance_model_card",
+      "category": "governance_artifacts",
+      "task": "model_card",
+      "modality": null,
+      "input_shape": null,
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.006,
+        "max": 0.02,
+        "mean": 0.01,
+        "std": 0.006,
+        "p50": 0.007,
+        "p95": 0.018,
+        "p99": 0.02
+      },
+      "throughput": {
+        "items_per_sec": 104166.67,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 285.21,
+        "rss_mb_after": 285.21,
+        "rss_mb_peak": 285.21,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "governance_risk_register",
+      "category": "governance_artifacts",
+      "task": "risk_register",
+      "modality": null,
+      "input_shape": null,
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 2,
+      "measurement_runs": 5,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.017,
+        "max": 0.025,
+        "mean": 0.019,
+        "std": 0.003,
+        "p50": 0.018,
+        "p95": 0.024,
+        "p99": 0.025
+      },
+      "throughput": {
+        "items_per_sec": 52083.33,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 285.21,
+        "rss_mb_after": 285.21,
+        "rss_mb_peak": 285.21,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "concurrent_seg_4threads",
+      "category": "stress_concurrency",
+      "task": "segmentation_4threads",
+      "modality": "MRI",
+      "input_shape": [
+        64,
+        64,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 0,
+      "measurement_runs": 1,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.002,
+        "max": 0.002,
+        "mean": 0.002,
+        "std": 0.0,
+        "p50": 0.002,
+        "p95": 0.002,
+        "p99": 0.002
+      },
+      "throughput": {
+        "items_per_sec": 416666.65,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 305.37,
+        "rss_mb_after": 305.38,
+        "rss_mb_peak": 305.38,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      },
+      "extra": {
+        "rps": 387.98
+      }
+    },
+    {
+      "id": "memory_leak_50iters",
+      "category": "stress_stability",
+      "task": "segmentation_soak",
+      "modality": "MRI",
+      "input_shape": [
+        32,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 0,
+      "measurement_runs": 1,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 0.002,
+        "max": 0.002,
+        "mean": 0.002,
+        "std": 0.0,
+        "p50": 0.002,
+        "p95": 0.002,
+        "p99": 0.002
+      },
+      "throughput": {
+        "items_per_sec": 625000.21,
+        "voxels_per_sec": null
+      },
+      "memory": {
+        "rss_mb_before": 305.54,
+        "rss_mb_after": 305.54,
+        "rss_mb_peak": 305.54,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      },
+      "extra": {
+        "rss_growth_mb": 0.0
+      }
+    },
+    {
+      "id": "scale_sec_64x64x64",
+      "category": "scalability",
+      "task": "segmentation",
+      "modality": null,
+      "input_shape": [
+        64,
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 1,
+      "measurement_runs": 3,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 6.218,
+        "max": 7.554,
+        "mean": 6.84,
+        "std": 0.673,
+        "p50": 6.748,
+        "p95": 7.473,
+        "p99": 7.537
+      },
+      "throughput": {
+        "items_per_sec": 146.21,
+        "voxels_per_sec": 38327200.77
+      },
+      "memory": {
+        "rss_mb_before": 306.54,
+        "rss_mb_after": 308.54,
+        "rss_mb_peak": 308.54,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "scale_sec_128x128x64",
+      "category": "scalability",
+      "task": "segmentation",
+      "modality": null,
+      "input_shape": [
+        128,
+        128,
+        64
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 1,
+      "measurement_runs": 3,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 9.987,
+        "max": 11.591,
+        "mean": 10.702,
+        "std": 0.816,
+        "p50": 10.529,
+        "p95": 11.485,
+        "p99": 11.57
+      },
+      "throughput": {
+        "items_per_sec": 93.44,
+        "voxels_per_sec": 97977001.75
+      },
+      "memory": {
+        "rss_mb_before": 311.54,
+        "rss_mb_after": 318.8,
+        "rss_mb_peak": 318.8,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      }
+    },
+    {
+      "id": "scale_sec_128x128x128",
+      "category": "scalability",
+      "task": "segmentation",
+      "modality": null,
+      "input_shape": [
+        128,
+        128,
+        128
+      ],
+      "dtype": "float32",
+      "device": "cpu",
+      "warmup_runs": 1,
+      "measurement_runs": 3,
+      "success": true,
+      "error": null,
+      "skipped_reason": null,
+      "latency_ms": {
+        "min": 18.262,
+        "max": 19.583,
+        "mean": 18.902,
+        "std": 0.661,
+        "p50": 18.86,
+        "p95": 19.511,
+        "p99": 19.569
+      },
+      "throughput": {
+        "items_per_sec": 52.9,
+        "voxels_per_sec": 110949269.65
+      },
+      "memory": {
+        "rss_mb_before": 322.8,
+        "rss_mb_after": 338.83,
+        "rss_mb_peak": 338.83,
+        "vram_mb_before": null,
+        "vram_mb_after": null,
+        "vram_mb_peak": null
+      },
+      "extra": {
+        "profile_summary": "         4348 function calls in 0.024 seconds\n\n   Ordered by: cumulative time\n   List reduced from 112 to 20 due to restriction <20>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n        1    0.000    0.000    0.024    0.024 C:\\Users\\yunus\\rhenium-os\\tests\\perf\\test_stress.py:121(_run)\n        1    0.001    0.001    0.024    0.024 C:\\Users\\yunus\\rhenium-os\\src\\rhenium\\models\\core.py:239(run)\n        1    0.002    0.002    0.015    0.015 C:\\Users\\yunus\\rhenium-os\\src\\rhenium\\models\\core.py:287(_run_segmentation)\n        1    0.000    0.000    0.008    0.008 C:\\Users\\yunus\\rhenium-os\\src\\rhenium\\core\\reproducibility.py:22(set_seed)\n        1    0.000    0.000    0.008    0.008 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\torch\\random.py:32(manual_seed)\n        2    0.000    0.000    0.007    0.004 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\traceback.py:244(format_stack)\n        4    0.006    0.002    0.006    0.002 {method 'reduce' of 'numpy.ufunc' objects}\n        1    0.000    0.000    0.005    0.005 C:\\Users\\yunus\\rhenium-os\\src\\rhenium\\models\\core.py:513(_generate_evidence_dossier)\n        1    0.000    0.000    0.004    0.004 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\torch\\cuda\\random.py:115(manual_seed_all)\n        1    0.000    0.000    0.004    0.004 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\torch\\cuda\\__init__.py:338(_lazy_call)\n        2    0.000    0.000    0.004    0.002 {method 'sum' of 'numpy.ndarray' objects}\n        2    0.000    0.000    0.004    0.002 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\numpy\\_core\\_methods.py:49(_sum)\n        1    0.000    0.000    0.004    0.004 C:\\Users\\yunus\\rhenium-os\\src\\rhenium\\data\\volume.py:198(to_tensor)\n        1    0.004    0.004    0.004    0.004 {method 'astype' of 'numpy.ndarray' objects}\n        2    0.000    0.000    0.004    0.002 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\traceback.py:251(extract_stack)\n        2    0.000    0.000    0.004    0.002 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\traceback.py:437(extract)\n        2    0.001    0.000    0.004    0.002 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\traceback.py:459(_extract_from_extended_frame_gen)\n        2    0.000    0.000    0.004    0.002 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\traceback.py:37(format_list)\n        2    0.000    0.000    0.003    0.002 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\traceback.py:745(format)\n        1    0.000    0.000    0.003    0.003 C:\\Users\\yunus\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\torch\\xpu\\random.py:98(manual_seed_all)\n\n\n"
+      }
+    }
+  ],
+  "summary": {
+    "total_benchmarks": 49,
+    "passed": 49,
+    "failed": 0,
+    "skipped": 0,
+    "top_line_metrics": {
+      "e2e_latency_p50_ms": 3.226,
+      "e2e_latency_p95_ms": 3.582,
+      "e2e_throughput_items_per_sec": 315.9,
+      "peak_memory_rss_mb": 338.83,
+      "peak_memory_vram_mb": null
+    },
+    "regression_status": {
+      "baseline_file": null,
+      "has_regressions": false,
+      "regression_count": 0,
+      "improvement_count": 0,
+      "regressions": []
+    }
+  }
+}

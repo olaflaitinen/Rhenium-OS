@@ -1,0 +1,99 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install ruff black mypy
+      - name: Ruff
+        run: ruff check src/
+      - name: Black
+        run: black --check src/
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: pip install -e ".[dev,perf]"
+      - name: Test
+        run: pytest tests/ -m "not slow and not gpu and not bench and not perf" --cov=rhenium --cov-report=xml -q
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        if: matrix.python-version == '3.11'
+
+  benchmark-smoke:
+    runs-on: ubuntu-latest
+    needs: [lint]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -e ".[dev,perf]"
+      - name: Run smoke benchmarks
+        run: |
+          pytest tests/smoke/ -v --tb=short
+          pytest tests/bench/ -m smoke -v --tb=short
+        timeout-minutes: 5
+      - name: Upload benchmark artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: benchmark-results
+          path: artifacts/benchmarks/
+          retention-days: 7
+
+  perf-smoke:
+    runs-on: ubuntu-latest
+    needs: [lint]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -e ".[dev,perf]"
+      - name: Run performance smoke tests
+        run: pytest tests/perf/ -m perf_smoke -v --tb=short
+        timeout-minutes: 5
+        env:
+          RHENIUM_PERF_DEVICE: cpu
+      - name: Upload perf artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: perf-results
+          path: artifacts/perf/
+          retention-days: 7
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [lint, test, benchmark-smoke, perf-smoke]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build
+        run: |
+          pip install build
+          python -m build

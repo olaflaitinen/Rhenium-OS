@@ -1,0 +1,76 @@
+site_name: Rhenium OS Documentation
+site_description: Multi-Modality AI Platform for Medical Imaging Research
+site_url: https://rhenium-os.github.io/rhenium-os/
+repo_url: https://github.com/rhenium-os/rhenium-os
+repo_name: rhenium-os/rhenium-os
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - attr_list
+  - md_in_html
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quickstart.md
+  - User Guide:
+      - Data Handling: user-guide/data.md
+      - Reconstruction: user-guide/reconstruction.md
+      - Perception: user-guide/perception.md
+      - Generative: user-guide/generative.md
+  - API Reference:
+      - Core: api/core.md
+      - Data: api/data.md
+      - Models: api/models.md
+      - XAI: api/xai.md
+  - Mathematical Foundations: math/foundations.md
+  - Governance: governance/index.md

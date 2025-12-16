@@ -1,0 +1,61 @@
+name: Nightly Performance Benchmarks
+
+on:
+  schedule:
+    # Run at 2 AM UTC daily
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      device:
+        description: 'Device to run on'
+        required: false
+        default: 'cpu'
+        type: choice
+        options:
+          - cpu
+          - cuda
+
+jobs:
+  full-perf-suite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      
+      - name: Install dependencies
+        run: pip install -e ".[dev,perf]"
+      
+      - name: Run full performance benchmark suite
+        run: |
+          pytest tests/perf/ -m perf -v --tb=short
+        timeout-minutes: 30
+        env:
+          RHENIUM_PERF_DEVICE: ${{ github.event.inputs.device || 'cpu' }}
+      
+      - name: Generate dashboard
+        run: |
+          python scripts/render_perf_dashboard.py || true
+      
+      - name: Upload performance report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nightly-perf-report-${{ github.run_number }}
+          path: |
+            artifacts/perf/report.json
+            artifacts/perf/perfcard.md
+            docs/perf/dashboard.md
+          retention-days: 30
+      
+      - name: Check for regressions
+        if: always()
+        run: |
+          if [ -f "artifacts/perf/report.json" ]; then
+            echo "Performance report generated successfully"
+            cat artifacts/perf/report.json | head -100
+          else
+            echo "No performance report generated"
+          fi

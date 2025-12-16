@@ -1,0 +1,51 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Data
+/data/
+/models/
+/logs/
+/cache/
+/results/
+
+# Environment
+.env
+.env.local
+
+# Medical imaging
+*.nii
+*.nii.gz
+*.dcm
+*.h5
+*.hdf5
+
+# Weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors

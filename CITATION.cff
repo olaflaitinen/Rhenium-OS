@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Rhenium OS: Multi-Modality AI Platform for Medical Imaging Research"
+version: 0.1.0
+date-released: 2025-01-01
+url: "https://github.com/rhenium-os/rhenium-os"
+repository-code: "https://github.com/rhenium-os/rhenium-os"
+license: EUPL-1.1
+keywords:
+  - medical-imaging
+  - deep-learning
+  - radiology
+  - mri
+  - ct
+  - segmentation
+  - reconstruction
+  - physics-informed-neural-networks
+abstract: >-
+  Rhenium OS is a comprehensive platform for medical imaging AI research,
+  supporting reconstruction, perception, and generative tasks across
+  MRI, CT, Ultrasound, and X-ray modalities. It provides Physics-Informed
+  Neural Networks (PINNs), state-of-the-art segmentation models, and
+  an Evidence Dossier framework for transparent AI outputs.

@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  rhenium:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+      - ./models:/models
+      - ./logs:/logs
+    environment:
+      - RHENIUM_DEVICE=cpu
+      - RHENIUM_MEDGEMMA_BACKEND=stub
+
+  rhenium-gpu:
+    build: .
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./data:/data
+      - ./models:/models
+      - ./logs:/logs
+    environment:
+      - RHENIUM_DEVICE=cuda
+      - RHENIUM_MEDGEMMA_BACKEND=stub
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]

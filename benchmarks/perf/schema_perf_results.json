@@ -1,0 +1,289 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rhenium-os/schemas/perf_results.json",
+  "title": "Rhenium Performance Benchmark Results",
+  "description": "Schema for performance benchmark results from Rhenium OS",
+  "type": "object",
+  "required": ["environment", "model", "benchmarks", "summary"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of benchmark run"
+    },
+    "environment": {
+      "type": "object",
+      "required": ["python", "os", "cpu", "ram_gb"],
+      "properties": {
+        "python": {
+          "type": "string",
+          "description": "Python version (e.g., 3.11.5)"
+        },
+        "torch": {
+          "type": "string",
+          "description": "PyTorch version"
+        },
+        "cuda": {
+          "type": ["string", "null"],
+          "description": "CUDA version or null if not available"
+        },
+        "cudnn": {
+          "type": ["string", "null"],
+          "description": "cuDNN version or null"
+        },
+        "os": {
+          "type": "string",
+          "description": "Operating system (e.g., Linux, Windows, Darwin)"
+        },
+        "os_version": {
+          "type": "string",
+          "description": "OS version string"
+        },
+        "cpu": {
+          "type": "string",
+          "description": "CPU model name"
+        },
+        "cpu_count": {
+          "type": "integer",
+          "description": "Number of logical CPU cores"
+        },
+        "gpu": {
+          "type": ["string", "null"],
+          "description": "GPU model name or null if not available"
+        },
+        "gpu_count": {
+          "type": "integer",
+          "description": "Number of GPUs"
+        },
+        "ram_gb": {
+          "type": "number",
+          "description": "Total system RAM in GB"
+        },
+        "vram_gb": {
+          "type": ["number", "null"],
+          "description": "Total GPU VRAM in GB or null"
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": ["version", "core_model_id"],
+      "properties": {
+        "git_sha": {
+          "type": ["string", "null"],
+          "description": "Git commit SHA or null if not in git repo"
+        },
+        "git_branch": {
+          "type": ["string", "null"],
+          "description": "Git branch name"
+        },
+        "git_dirty": {
+          "type": "boolean",
+          "description": "Whether working directory has uncommitted changes"
+        },
+        "version": {
+          "type": "string",
+          "description": "Rhenium OS version (e.g., 1.0.0)"
+        },
+        "core_model_id": {
+          "type": "string",
+          "description": "Identifier for the core model (e.g., RheniumCoreModel)"
+        },
+        "config_hash": {
+          "type": "string",
+          "description": "Hash of model configuration for reproducibility"
+        }
+      }
+    },
+    "benchmarks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/benchmark_result"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "total_benchmarks": {
+          "type": "integer"
+        },
+        "passed": {
+          "type": "integer"
+        },
+        "failed": {
+          "type": "integer"
+        },
+        "skipped": {
+          "type": "integer"
+        },
+        "total_duration_sec": {
+          "type": "number"
+        },
+        "top_line_metrics": {
+          "type": "object",
+          "properties": {
+            "e2e_latency_p50_ms": {
+              "type": "number",
+              "description": "End-to-end latency 50th percentile"
+            },
+            "e2e_latency_p95_ms": {
+              "type": "number",
+              "description": "End-to-end latency 95th percentile"
+            },
+            "e2e_throughput_items_per_sec": {
+              "type": "number",
+              "description": "End-to-end throughput"
+            },
+            "peak_memory_rss_mb": {
+              "type": "number",
+              "description": "Peak RSS memory across all benchmarks"
+            },
+            "peak_memory_vram_mb": {
+              "type": ["number", "null"],
+              "description": "Peak VRAM across all benchmarks"
+            }
+          }
+        },
+        "regression_status": {
+          "type": "object",
+          "properties": {
+            "baseline_file": {
+              "type": ["string", "null"],
+              "description": "Path to baseline file used for comparison"
+            },
+            "has_regressions": {
+              "type": "boolean"
+            },
+            "regression_count": {
+              "type": "integer"
+            },
+            "improvement_count": {
+              "type": "integer"
+            },
+            "regressions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "benchmark_id": { "type": "string" },
+                  "metric": { "type": "string" },
+                  "baseline_value": { "type": "number" },
+                  "current_value": { "type": "number" },
+                  "change_percent": { "type": "number" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "benchmark_result": {
+      "type": "object",
+      "required": ["id", "category", "success"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique benchmark identifier"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "e2e_core_model",
+            "io_parsing",
+            "preprocessing",
+            "perception_inference",
+            "reconstruction_mri",
+            "reconstruction_ct",
+            "pinn_step",
+            "gan_inference",
+            "xai_dossier",
+            "serialization",
+            "fastapi_readiness",
+            "cli_overhead",
+            "governance_artifacts"
+          ]
+        },
+        "modality": {
+          "type": ["string", "null"],
+          "enum": ["MRI", "CT", "US", "XR", null]
+        },
+        "task": {
+          "type": "string",
+          "description": "Specific task being benchmarked"
+        },
+        "input_shape": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "description": "Shape of input tensor [D, H, W] or [C, D, H, W]"
+        },
+        "dtype": {
+          "type": "string",
+          "enum": ["float32", "float16", "bfloat16"]
+        },
+        "device": {
+          "type": "string",
+          "enum": ["cpu", "cuda"]
+        },
+        "warmup_runs": {
+          "type": "integer",
+          "description": "Number of warmup iterations"
+        },
+        "measurement_runs": {
+          "type": "integer",
+          "description": "Number of timed iterations"
+        },
+        "latency_ms": {
+          "type": "object",
+          "properties": {
+            "min": { "type": "number" },
+            "max": { "type": "number" },
+            "mean": { "type": "number" },
+            "std": { "type": "number" },
+            "p50": { "type": "number" },
+            "p95": { "type": "number" },
+            "p99": { "type": "number" }
+          }
+        },
+        "throughput": {
+          "type": "object",
+          "properties": {
+            "items_per_sec": { "type": "number" },
+            "voxels_per_sec": { "type": ["number", "null"] }
+          }
+        },
+        "memory": {
+          "type": "object",
+          "properties": {
+            "rss_mb_before": { "type": "number" },
+            "rss_mb_after": { "type": "number" },
+            "rss_mb_peak": { "type": "number" },
+            "vram_mb_before": { "type": ["number", "null"] },
+            "vram_mb_after": { "type": ["number", "null"] },
+            "vram_mb_peak": { "type": ["number", "null"] }
+          }
+        },
+        "success": {
+          "type": "boolean"
+        },
+        "error": {
+          "type": ["string", "null"],
+          "description": "Error message if failed"
+        },
+        "skipped_reason": {
+          "type": ["string", "null"],
+          "description": "Reason for skipping (e.g., 'GPU not available')"
+        },
+        "extra": {
+          "type": "object",
+          "description": "Additional benchmark-specific metrics"
+        }
+      }
+    }
+  }
+}
