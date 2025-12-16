@@ -545,6 +545,15 @@ class RheniumCoreModel:
         study_uid = kwargs.get("study_uid", volume.metadata.study_uid or "unknown")
         series_uid = kwargs.get("series_uid", volume.metadata.series_uid or "unknown")
 
+        # Determine limitations based on mode
+        limitations = []
+        if not self.config.clinical_mode:
+            limitations.append("Research use only")
+            limitations.append("Not validated for clinical decisions")
+        else:
+            limitations.append("Clinical decision support")
+            limitations.append("Review by radiologist required")
+
         # Create finding based on task
         if task == "segmentation":
             volume_value = float(np.sum(output) * np.prod(volume.spacing))
@@ -565,7 +574,7 @@ class RheniumCoreModel:
                     NarrativeEvidence(
                         evidence_id=f"narr_{dossier_id}",
                         explanation=f"Segmentation produced mask with {int(output.sum())} positive voxels",
-                        limitations=["Research use only", "Not validated for clinical decisions"],
+                        limitations=limitations,
                     )
                 ],
             )
@@ -579,7 +588,7 @@ class RheniumCoreModel:
                     NarrativeEvidence(
                         evidence_id=f"narr_{dossier_id}",
                         explanation=f"Classification predicted class {int(output[0]) if len(output) > 0 else 'N/A'}",
-                        limitations=["Research use only"],
+                        limitations=limitations,
                     )
                 ],
             )
@@ -594,7 +603,7 @@ class RheniumCoreModel:
                     NarrativeEvidence(
                         evidence_id=f"narr_{dossier_id}",
                         explanation=f"Detection found {len(detections)} candidate regions",
-                        limitations=["Research use only", "Requires expert review"],
+                        limitations=limitations,
                     )
                 ],
             )
@@ -608,7 +617,7 @@ class RheniumCoreModel:
                     NarrativeEvidence(
                         evidence_id=f"narr_{dossier_id}",
                         explanation=f"Task {task} completed successfully",
-                        limitations=["Research use only"],
+                        limitations=limitations,
                     )
                 ],
             )
